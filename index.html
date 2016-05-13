@@ -1,0 +1,640 @@
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<title>
+		terribly tiny tales
+	</title>
+	<link rel="stylesheet" href="./css/fullpage.css" />
+	<style>
+
+/* HELPER CLASSES
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+
+@font-face {
+  font-family: "untitled-font-1";
+  src:url("./fonts/untitled-font-1.eot");
+  src:url("./fonts/untitled-font-1.eot?#iefix") format("embedded-opentype"),
+    url("./fonts/untitled-font-1.woff") format("woff"),
+    url("./fonts/untitled-font-1.ttf") format("truetype"),
+    url("./fonts/untitled-font-1.svg#untitled-font-1") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+[class^="icon-"]:after,
+[class*=" icon-"]:after {
+  font-family: "untitled-font-1";
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  speak: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-up-open-big:after {
+  content: "a";
+  margin-top: 30px;
+  margin-bottom: 10px;
+  font-size: 1em;
+  display: block;
+  -webkit-transform: rotateX(180deg);
+          transform: rotateX(180deg);
+  color: black;
+  -webkit-transition: color .3s;
+          transition: color .3s;
+}
+
+.icon-up-open-big:hover:after {
+	color: white;	
+}
+
+.scroll-icon {
+	position: absolute;
+ 	left: 50%;
+  bottom: 30px;
+  padding: 0 10px;
+  	-webkit-transform: translateX(-50%);
+  	    -ms-transform: translateX(-50%);
+  	        transform: translateX(-50%);
+}
+
+
+
+.clearfix:before,
+.clearfix:after {
+  content: "";
+  display: table;
+}
+
+.clearfix:after {
+  clear: both;
+}
+
+.l-left {
+	float: left;
+}
+
+.l-right {
+	float: right;
+}
+
+.end {
+	margin-top: 30px;
+	font-size: 3em;
+	font-weight: bold;
+	opacity: 0;
+	-webkit-transform: translateY(300px);
+	    -ms-transform: translateY(300px);
+	        transform: translateY(300px);
+	-webkit-transition: opacity, -webkit-transform 1s;
+	        transition: opacity, transform 1s;
+	-webkit-transition-delay: 1s;
+	        transition-delay: 1s;
+}
+
+
+/* RESET-GENERAL STYLES
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+* {
+	margin: 0;
+	padding: 0;
+}
+
+html {
+	font-size: 62.5%;
+}
+
+body {
+	color: black;
+	/*letter-spacing: .18em;*/
+}
+
+a {
+	text-decoration: none;
+	color: white;
+}
+
+ul, li {
+	list-style-type: none;
+}
+
+
+		@font-face {
+			src: url("./fonts/helvetica-ul.ttf");
+			font-family: neue;
+		}
+		@font-face {
+			src: url("./fonts/helvetica-l.ttf");
+			font-family: neue-l;
+		}
+
+
+
+
+
+		body, html {
+			font-family: neue;
+			-webkit-font-smoothing: antialiased;
+			  -moz-osx-font-smoothing: grayscale;
+		}
+		h1, h2, h3, h4 {
+			font-weight: normal;
+		}
+		#logo_hero {
+			font-size: 7em;
+			width: 100%;
+			text-align: center;
+		}
+		#subtitle {
+			font-size: 2em;
+			font-weight: 100;
+			position: absolute;	
+			bottom: 0px;
+			left: 0px;
+			width: 100%;
+			background-color: rgba(255,255,255,1);
+			color: black;
+			max-height: 10%;
+			padding-top: 30px;
+			padding-bottom: 30px;
+			font-family: neue-l;
+		}
+		small {
+			font-size: 0.3em;
+		}
+		section {
+			text-align: center;
+		}
+		#section1 {
+			background-color: rgba(0,0,0,0.9);
+			color: white;
+		}
+		.tale_slide {
+			/*width: vw;*/
+			/*max-width: 100vw;*/
+			/*max-height:80vh;*/
+			/*height: 100%;*/
+			display: inline;
+			max-width: 100%;
+			max-height: 50%;
+		}
+		.horizontal-scrolling {
+			display: inline-block;
+			max-height: 50vh;
+		}
+		.footer {
+			position: absolute;
+			bottom: 0px;
+			left: 0px;
+			width: 100%;
+			font-size: 1.5em;
+			font-family: neue-l;
+			background-color: rgba(0,0,0,0.9);
+			color: white;
+			/*padding-bottom: 20px;*/
+
+		}
+		.footer tr td {
+			text-align: center;
+			padding-top: 20px;
+			padding-bottom: 20px;
+			cursor: pointer;
+		}
+		.footer tr td:hover {
+			background-color: rgba(255,255,255,1);
+			color: black;
+			border-radius: 100px;
+		}
+		h1 {
+			font-size: 5em;
+		}
+		.social {
+			padding-bottom: 100px;
+			margin-top: 50px;
+			width: 100%;
+			text-align: center;
+		}
+		.social_icon {
+			display: inline-block;
+			padding: 20px;
+			letter-spacing: 0.7em;
+			font-size: 1.4em;
+			font-family: neue-l;
+		}
+		.anim {
+		  -o-transition:.5s;
+		  -ms-transition:.5s;
+		  -moz-transition:.5s;
+		  -webkit-transition:.5s;
+		  transition:.5s;
+		}
+		
+.header-top {
+	background: rgba(0,0,0,0.9);
+	height: 70px;
+	padding: 0 10px;
+	position: fixed;
+	color: black;
+	top: 0;
+	width: 100%;
+	display: none;
+	font-family: neue-l;
+	z-index: 12;
+	box-sizing: border-box;
+}
+
+h4 {
+	line-height: 70px;
+	height: 70px;
+	font-size: 2.5em;
+}
+
+h4 a {
+	display: block;
+	padding: 0 10px;
+}
+
+.toggle-menu {
+	width: 50px;
+	height: 50px;
+	display: inline-block;
+	position: relative;
+	top: 10px;
+}
+
+.toggle-menu i {
+	position: absolute;
+	display: block;
+	height: 2px;
+	background: white;
+	width: 30px;
+	left: 10px;
+	-webkit-transition: all .3s;
+	        transition: all .3s;
+}
+
+.toggle-menu i:nth-child(1) {
+	top: 16px;
+}
+
+.toggle-menu i:nth-child(2) {
+	top: 24px;
+}
+
+.toggle-menu i:nth-child(3) {
+	top: 32px;
+}
+
+.open-menu i:nth-child(1) {
+	top: 25px;
+	-webkit-transform: rotateZ(45deg);
+	        transform: rotateZ(45deg);
+}
+
+.open-menu i:nth-child(2) {
+	background: transparent;
+}
+
+.open-menu i:nth-child(3) {
+	top: 25px;
+	-webkit-transform: rotateZ(-45deg);
+	        transform: rotateZ(-45deg);
+}
+
+nav {
+ 	height: 0;
+	opacity: 0;
+  box-sizing: border-box;
+	background: rgba(0,0,0,0.8);
+	position: fixed;
+	top: 70px;
+	width: 100%;
+  -webkit-transition: all 0.5s;
+          transition: all 0.5s;
+}
+
+.open-menu ~ nav {
+	opacity: 1;
+ 	padding: 80px 0;
+	z-index: 15;
+	height: calc(90vh - 70px);
+}
+
+nav ul {
+	padding: 0 10px;
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+}
+
+nav li {
+	-webkit-box-flex: 1;
+	-webkit-flex: 1;
+	    -ms-flex: 1;
+	        flex: 1;
+}
+
+nav li a {
+	font-size: 2em;
+	display: block;
+	padding: 30px;
+	text-align: center;
+	-webkit-transition: background .3s;
+	        transition: background .3s;
+}
+
+nav li:nth-child(odd) a,
+body.fp-viewing-fifthSection-1 #menu li:nth-child(5) a {
+	background: #962D3E;
+}
+
+nav li:nth-child(even) a {
+	background: #aa3346;
+}
+
+nav li:nth-child(odd) a:hover {
+	background: #9e2f41;
+}
+
+nav li:nth-child(even) a:hover {
+	background: #c53c52;
+}
+
+nav li.active a,
+body.fp-viewing-fifthSection-1 #menu li:last-child a {
+  background: #453659;
+}
+
+
+
+
+
+
+@media screen and (max-width: 767px) {
+	nav ul {
+		-webkit-box-orient: vertical;
+		-webkit-box-direction: normal;
+		-webkit-flex-direction: column;
+		    -ms-flex-direction: column;
+		        flex-direction: column;
+	}
+
+	nav li {
+		margin-top: 1px;
+	}
+  
+  nav li a {
+    font-size: 1.5em;
+  }
+  
+  .scroll-icon {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  html {
+    font-size: 50%;
+  }
+  
+  .open-menu ~ nav {
+		padding: 20px 0;
+	}
+
+	nav li a {
+		padding: 3px;
+	}
+}
+
+.subpara {
+	font-size: 2em;
+	color: rgba(0,0,0,0.5);
+	font-family: neue-l;
+	margin-top: 40px;
+	display: block;
+	width: 100%;
+	padding-left: 20%;
+	padding-right: 20%;
+	box-sizing: border-box;
+}
+.sectionheader {
+	display: block;
+	width: 100%;
+	padding-left: 20px;
+	padding-right: 20px;
+	box-sizing: border-box;
+}
+#fp-nav {
+}
+	</style>
+</head>
+<body>
+<header>
+      <div class="header-top clearfix">
+        <h4 class="l-left"><a href="#firstSection">terribly tiny tales<sup><small>TM</small></sup></a></h4>
+        <a class="l-right toggle-menu" href="#">
+          <i></i>
+          <i></i>
+          <i></i>
+        </a>
+      </div>
+
+      <nav class="hide">
+        <ul id="menu">
+          <li data-menuanchor="firstSection">
+            <a href="#firstSection" title="First Section">First Section</a>
+          </li>
+          <li data-menuanchor="secondSection">
+            <a href="#secondSection" title="Second Section">Second Section</a>
+          </li>
+          <li data-menuanchor="thirdSection">
+            <a href="#thirdSection" title="Second Section">Third Section</a>
+          </li>
+          <li data-menuanchor="fourthSection">
+            <a href="#fourthSection" title="Fourth Section">Fourth Section</a>
+          </li>
+          <li data-menuanchor="fifthSection">
+            <a href="#fifthSection" title="Fourth Section">Fourth Section</a>
+          </li>
+          <li data-menuanchor="sixthSection">
+            <a href="#sixthSection" title="Fourth Section">Fourth Section</a>
+          </li>
+          <!-- <li data-menuanchor="seventhSection">
+            <a href="#seventhSection" title="Fourth Section">Fourth Section</a>
+          </li>
+          <li data-menuanchor="eighthSection">
+            <a href="#eighthSection" title="Fourth Section">Fourth Section</a>
+          </li>
+          <li data-menuanchor="ninthSection">
+            <a href="#ninthSection" title="Fourth Section">Fourth Section</a>
+          </li>
+          <li data-menuanchor="tenthSection">
+            <a href="#tenthSection" title="Fourth Section">Fourth Section</a>
+          </li>
+ -->        </ul>
+      </nav>
+    </header>
+
+<div id="fullPage">
+    <section class="vertical-scrolling" id="section1">
+    	<div id="logo_hero">
+    		terribly tiny tales<sup><small>TM</small></sup>
+    	</div>
+        <div id="subtitle">The world's largest micro-fiction platform  
+        	<a href="#secondSection" class="icon-up-open-big"></a>
+        </div>
+
+    </section>
+    <section class="vertical-scrolling">
+    	<h1 class="sectionheader">One tale, terribly tiny, to go please.</h1>
+	    <span class="subpara">This page shows a sliding view of a few selected tales. -Mrinal</span>
+    </section>
+    <section class="vertical-scrolling">
+    <h1 class="sectionheader">Long story short</h1>
+    <span class="subpara">From storifying news to condensing classics, a tale is a book that only takes a minute.</p>
+    </section>
+    <section class="vertical-scrolling">
+    <h1 class="sectionheader">A world full of stories</h1>
+    <span class="subpara">Like hot chocolate during the monsoons, and pina colada during summer, our tales are here to quench every emotion you throw at us.</span>
+    </section>
+    <!-- <section class="vertical-scrolling">
+    <h1 class="sectionheader">Here's to youth</h1>
+    <span class="subpara">Human race has been built on a foundation of stories, and we love telling them. Our tales make sure we keep the legacy alive.</span>
+    </section>
+    <section class="vertical-scrolling">
+    <h1 class="sectionheader">Tiny is the next big thing</h1>
+    <span class="subpara">From storifying news to condensing classics, a tale is a book that only takes a minute.</span>
+    </section>
+    <section class="vertical-scrolling">
+    <h1 class="sectionheader">Everyone's a storyteller</h1>
+    <span class="subpara">From storifying news to condensing classics, a tale is a book that only takes a minute.</span>
+    </section>
+    <section class="vertical-scrolling">
+    <h1 class="sectionheader">You're one in a million</h1>
+    <span class="subpara">From storifying news to condensing classics, a tale is a book that only takes a minute.</span>
+    </section> -->
+    <section class="vertical-scrolling">
+    	<div class="horizontal-scrolling">
+	        <h1>Look at all these brands we've worked with!</h1>
+	        <span class="subpara">Press the right arrow on your keyboard or select one using the circle at the bottom -Mrinal</span>
+	    </div>
+	    <div class="horizontal-scrolling">
+	        <h1>Woohoo! More brands!</h1>
+	    </div>
+    </section> 
+    <section class="vertical-scrolling">
+    	<h1>Join our community</h1><br /><br /><br /><br />
+    	<div id="social">
+    		<span class="social_icon">FACEBOOK</span>
+    		<span class="social_icon">INSTAGRAM</span>
+    		<span class="social_icon">TWITTER</span>
+    		<span class="social_icon">YOUTUBE</span>
+    		<span class="social_icon">STORE</span>
+    	</div>
+    	<table class="footer fp-auto-height">
+    		<tr>
+    			<td width="30%" class="anim">
+    				About
+    			</td>
+    			<td width="33%" class="anim">
+    				FAQs
+    			</td>
+    			<td width="33%" rowspan="3" class="anim">
+    				<span style="font-size: 4em; font-family: neue;">ttt</span>
+    				<br />Download
+    			</td>
+    		</tr>
+    		<tr>
+    			<td width="33%" class="anim">
+    				Privacy
+    			</td>
+    			<td width="33%" class="anim">
+    				Blog
+    			</td>
+    		</tr>
+    		<tr>
+    			<td width="33%" class="anim">
+    				Terms of Service
+    			</td>	
+    			<td width="33%" class="anim">
+    				Press
+    			</td>
+    		</tr>
+    	</table>
+    </section>  
+</div>
+
+
+
+</body>
+	<script src="./js/jquery.js"></script>
+	<script src="./js/fullpage.js"></script>
+	<script>
+	$(document).ready(function() {
+		 // variables
+		  var $header_top = $('.header-top');
+		  var $nav = $('nav');
+      	// $('.tale_slide').css('height', window.height/2);
+
+
+		  // toggle menu 
+		  $header_top.find('a').on('click', function() {
+		    $(this).parent().toggleClass('open-menu');
+		  });
+
+		$('#fullPage').fullpage({
+		    sectionSelector: '.vertical-scrolling',
+		    slideSelector: '.horizontal-scrolling',
+		    controlArrows: false, 
+		    scrollBar: true, 
+		    navigation: true, 
+		    slidesNavigation: true,
+		    anchors: ['firstSection', 'secondSection', 'thirdSection', 'fourthSection', 'fifthSection', 'sixthSection'],
+		    menu: '#menu',
+		    
+		    afterLoad: function(anchorLink, index) {
+		      // $header_top.css('background', 'rgba(255,255,255, 0.8)');
+		      $nav.css('background', 'rgba(255,255,255,0.7)');
+		      if (index == 1) {
+		      	$header_top.fadeOut();
+		      }
+		        else {
+			      	$header_top.fadeIn();
+
+		        }
+		    },
+
+		    onLeave: function(index, nextIndex, direction) {
+		      if(index == 5) {
+		        // $('#fp-nav').show();
+		      }
+		    },
+
+		    afterSlideLoad: function( anchorLink, index, slideAnchor, slideIndex){
+            var loadedSlide = $(this);
+
+            //first slide of the second section
+            if(index == 2 && slideIndex == 0){
+            	// $('.tale_slide').css("max-width", "100%");
+            }
+
+            //second slide of the second section (supposing #secondSlide is the
+            //anchor for the second slide
+            if(index == 2 && slideIndex == 'secondSlide'){
+                alert("Second slide loaded");
+            }
+        }
+
+		});
+		$.fn.fullpage.reBuild();
+	});
+
+	</script>
+</html>
