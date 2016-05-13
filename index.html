@@ -619,12 +619,12 @@ body.fp-viewing-fifthSection-1 #menu li:last-child a {
 		      $nav.css('background', 'rgba(0,0,0,0.7)');
 		      $('#fp-nav ul li a span, .fp-slidesNav ul li a span').css('background', 'rgb(0,0,0)'); 
 		      if (index == 1) {
-		      $('#fp-nav ul li a span, .fp-slidesNav ul li a span').css('background', 'rgb(255,255,255)'); 
+		      $('#fp-nav').fadeOut(); 
 		      	$header_top.fadeOut();
 		      }
 		        else {
 			      	$header_top.fadeIn();
-
+			      $('#fp-nav').fadeIn(); 
 		        	if (index == 2) {
 				      $('#fp-nav ul li a span, .fp-slidesNav ul li a span').css('background', 'rgb(255,255,255)'); 
 
