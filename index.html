@@ -1,7 +1,8 @@
 <html>
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-
+	<link rel="shortcut icon" href="./favico.jpg" type="image/x-icon">
+	<link rel="icon" href="./favico.jpg" type="image/x-icon">
 	<title>
 		terribly tiny tales
 	</title>
@@ -30,7 +31,7 @@
 		}
 		#logo_hero {
 			font-size: 8em;
-			width: 100%;
+			width: 50%;
 			text-align: center;
 		}
 		#subtitle {
@@ -54,7 +55,7 @@
 			text-align: center;
 		}
 		#section1 {
-			background-color: rgba(0,0,0,0.9);
+			background-color: rgba(0,0,0,1);
 			color: white;
 		}
 		
@@ -136,13 +137,13 @@ h4 a {
 
 
 .subpara {
-	font-size: 2em;
+	font-size: 2.2em;
 	color: rgba(0,0,0,0.5);
 	font-family: neue-l;
 	display: block;
 	width: 100%;
-	padding-left: 7%;
-	padding-right: 7%;
+	padding-left: 10%;
+	padding-right: 10%;
 	box-sizing: border-box;
 }
 .sectionheader {
@@ -150,6 +151,7 @@ h4 a {
 	width: 100vw;
 	padding-left: 10px;
 	padding-right: 10px;
+	text-align: center;
 	margin-bottom: 40px;
 	box-sizing: border-box;
 }
@@ -161,7 +163,7 @@ h4 a {
 			/*height: 100%;*/
 		}
 		#section2 {
-			background-color: rgba(0,0,0,1);
+			/*background-color: rgba(0,0,0,1);*/
 		}
 
 
@@ -189,9 +191,13 @@ h4 a {
 	width: 80%;
 	position: relative;
 	margin: 0 auto;
+	max-height: 10%;
+	height: 10%;
 }
 .brands_list tr td img {
-	max-width: 50%;
+	/*max-width: 50%;*/
+	max-height: 7vh;
+	width: auto;
 }
 .brands_list tr td {
 	text-align: center;
@@ -208,7 +214,9 @@ h4 a {
 	margin: 0 auto;
 }
 .social_list tr td img {
-	max-width: 50%;
+	/*max-width: 50%;*/
+	width: auto;
+	max-height: 4vh;
 }
 .social_list tr td {
 	text-align: center;
@@ -218,8 +226,8 @@ h4 a {
 }
 
 .sectionimage {
-	width: 40%;
-	margin-bottom: 80px;
+	width: 45%;
+	margin-bottom: 60px;
 }
 
 
@@ -253,6 +261,7 @@ h4 a {
   }
   #logo_hero {
   font-size: 5em;
+  width: 100%;
 }
 
   .brands_list {
@@ -277,21 +286,23 @@ h4 a {
 	padding: 20px;
 }
 .sectionimage {
-	width: 50%;
+	width: 90%;
 	margin-bottom: 40px;
 }
 .sectionheader {
 	margin-bottom: 40px;
+	font-size: 3.8em;
 }
+
 }
 
 @media screen and (max-height: 600px) {
 	#menu { 
 		top: 70px;
+		padding-top: 0px;
 	}
 	.sectionheader {
-		margin-bottom: 40px;
-		font-size: 4em;
+		margin-bottom: 20px;
 	}
 	.sectionimage {
 		margin-bottom: 40px;
@@ -314,6 +325,9 @@ h4 a {
   nav li a {
     padding: 3px;
   }
+  .sectionheader {
+	font-size: 3.6em;
+  }
 
 }
 
@@ -324,7 +338,7 @@ h4 a {
 <body>
 <header>
       <div class="header-top clearfix">
-        <h4 class="l-left"><a href="#firstSection">terribly tiny tales<sup><small>TM</small></sup></a></h4>
+        <h4 class="l-left"><a href="#firstSection">terribly tiny tales<sup><small>&trade;</small></sup></a></h4>
         <a class="l-right toggle-menu mobile_nav" href="#">
           <i></i>
           <i></i>
@@ -366,30 +380,18 @@ h4 a {
         	<li class="anim">
         		submit
         	</li>
-
-          <!-- <li data-menuanchor="seventhSection">
-            <a href="#seventhSection" title="Fourth Section">Fourth Section</a>
-          </li>
-          <li data-menuanchor="eighthSection">
-            <a href="#eighthSection" title="Fourth Section">Fourth Section</a>
-          </li>
-          <li data-menuanchor="ninthSection">
-            <a href="#ninthSection" title="Fourth Section">Fourth Section</a>
-          </li>
-          <li data-menuanchor="tenthSection">
-            <a href="#tenthSection" title="Fourth Section">Fourth Section</a>
-          </li>
- -->        </ul>
+		</ul>
       </nav>
     </header>
 
 <div id="fullPage">
     <section class="vertical-scrolling" id="section1">
-    	<div id="logo_hero">
-    		terribly tiny tales<sup><small>TM</small></sup>
-    	</div>
-        <div id="subtitle">The world's largest micro-fiction platform  
-        	<a href="#secondSection" class="icon-up-open-big"></a>
+    	<img src="./img/logo_hero.jpg" id="logo_hero">
+    		<!-- terribly tiny tales<sup><small>&trade;</small></sup> -->
+
+    	<!-- </div> -->
+        <div id="subtitle">The world's largest micro-fiction platform<br /><br />
+        	<a href="#secondSection" class="icon-up-open-big"><img src="./img/down.png" /></a>
         </div>
 
     </section>
@@ -449,6 +451,11 @@ h4 a {
 			        	<img class="brand_logo" src="./img/brand_logos/stayfree.png" />
 			        </td>
 			    </tr>
+			</table>
+	    </div>
+	    <div class="horizontal-scrolling">
+	        <h1 class="sectionheader">Brands we've worked with</h1>
+			<table class="brands_list" width="100%">
 			    <tr>
 			        <td width="33%">
 						<img class="brand_logo" src="./img/brand_logos/asianpaints.png" />
@@ -461,10 +468,7 @@ h4 a {
 			        </td>
 			    </tr>
 			</table>
-	    </div>
-	    <div class="horizontal-scrolling">
-	        <h1>Woohoo! More brands!</h1>
-	    </div>
+		</div>
     </section> 
     <section class="vertical-scrolling">
     	<h1 class="sectionheader">Join our community</h1>
@@ -539,10 +543,26 @@ h4 a {
 		  var $nav = $('nav');
       	// $('.tale_slide').css('height', window.height/2);
 
+      		$nav.click(function() {
+			    $header_top.toggleClass('open-menu');
+			    if ($header_top.hasClass('open-menu')) {
+		      	}
+		      	else {
+				      	$header_top.fadeOut();		      			
+		      	}
+      		});
 
+      		$('#menu').click(function(e) {
+      			e.stopPropagation();
+      		});
 		  // toggle menu 
 		  $header_top.find('a').on('click', function() {
 		    $(this).parent().toggleClass('open-menu');
+		    if ($header_top.hasClass('open-menu')) {
+		      	}
+		      	else {
+				      	$header_top.fadeOut();		      			
+		      	}
 		  });
 
 		$('#fullPage').fullpage({
@@ -552,21 +572,26 @@ h4 a {
 		    scrollBar: true, 
 		    // navigation: true, 
 		    slidesNavigation: true,
-		    // anchors: ['firstSection', 'secondSection', 'thirdSection', 'fourthSection', 'fifthSection', 'sixthSection'],
-		    // autoScrolling: false,
+		    anchors: ['firstSection', 'secondSection', 'thirdSection', 'fourthSection', 'fifthSection', 'sixthSection', 'seventhSection', 'eighthSection', 'ninthSection', 'tenthSection'],
+		    autoScrolling: false,
 
 		    afterLoad: function(anchorLink, index) {
+		      window.lastSlideLoaded = index;
 		      $header_top.css('background', 'rgba(0,0,0, 1)');
 		      $nav.css('background', 'rgba(0,0,0,0.9)');
 		      $('#fp-nav ul li a span, .fp-slidesNav ul li a span').css('background', 'rgb(0,0,0)'); 
 		      if (index == 1) {
 		      $('#fp-nav').fadeOut(); 
-		      	// $header_top.fadeOut();
+		      	if ($header_top.hasClass('open-menu')) {
+		      	}
+		      	else {
+			      	$header_top.fadeOut();
+		      	}
 		      }
 		        else {
 			      	$header_top.fadeIn();
 			      $('#fp-nav').fadeIn(); 
-		        	if (index == 2 || index == 9) {
+		        	if (index == 9) {
 				      $('#fp-nav ul li a span, .fp-slidesNav ul li a span').css('background', 'rgb(255,255,255)'); 
 
 		        	}

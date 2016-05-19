@@ -1,7 +1,7 @@
 
 /* HELPER CLASSES
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
-
+/*
 
 @font-face {
   font-family: "untitled-font-1";
@@ -38,12 +38,15 @@
   color: black;
   -webkit-transition: color .3s;
           transition: color .3s;
-}
+}*/
 
 .icon-up-open-big:hover:after {
-	color: white;	
+	color: black;	
 }
 
+.icon-up-open-big img {
+  max-height: 20px;
+}
 .scroll-icon {
 	position: absolute;
  	left: 50%;
@@ -166,10 +169,12 @@ ul, li {
 #menu {
   position: fixed;
   right: 0px;
-  top: 100px;
+  top: 70px;
+  padding-top: 30px;
   font-family: neue-l;
   width: 50%;
   color: white;
+  background-color: rgba(0,0,0,1);
 }
 
 #menu li {
@@ -220,7 +225,7 @@ nav {
   position: fixed;
   right: 0px;
   top: 70px;
-  width: 65%;
+  width: 100%;
   -webkit-transition: all 0.5s;
           transition: all 0.5s;
 }
