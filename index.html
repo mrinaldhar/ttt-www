@@ -385,7 +385,7 @@ section {
 <body>
 <header>
       <div class="header-top clearfix">
-        <h4 class="l-left"><img src="./img/logo_hero.jpg" id="logo_header"></h4>
+        <h4 class="l-left"><a href="index.html"><img src="./img/logo_hero.jpg" id="logo_header"></a></h4>
         <a class="l-right toggle-menu mobile_nav" href="#">
           <i></i>
           <i></i>
@@ -628,8 +628,9 @@ section {
 			      	}
 			      	else {
 					      	$header_top.fadeOut();	
-						// $.fn.fullpage.silentMoveTo(window.anchors[window.revertAfterMenuClose-1]);
-						console.log("closing")
+						console.log(window.revertAfterMenuClose-1)
+
+						// $.fn.fullpage.silentMoveTo(window.revertAfterMenuClose-1);
 			      	}
 			  });
 
