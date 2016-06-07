@@ -373,12 +373,19 @@ section {
 	width: 15px;
 	transform: translate(0, -50%);
 }
+#logo_header {
+	height: 100%;
+	vertical-align: center;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	box-sizing: border-box;
+}
 	</style>
 </head>
 <body>
 <header>
       <div class="header-top clearfix">
-        <h4 class="l-left"><a href="#firstSection">terribly tiny tales<sup><small>&trade;</small></sup></a></h4>
+        <h4 class="l-left"><img src="./img/logo_hero.jpg" id="logo_header"></h4>
         <a class="l-right toggle-menu mobile_nav" href="#">
           <i></i>
           <i></i>
@@ -617,11 +624,11 @@ section {
 			    		console.log("Opening");
 			    		window.revertAfterMenuClose = window.lastSlideLoaded;
 			    		console.log("moving to"+window.anchors[window.revertAfterMenuClose-1])
-						$.fn.fullpage.silentMoveTo(window.anchors[window.revertAfterMenuClose-1]);
+						// $.fn.fullpage.silentMoveTo(window.anchors[window.revertAfterMenuClose-1]);
 			      	}
 			      	else {
 					      	$header_top.fadeOut();	
-						$.fn.fullpage.silentMoveTo(window.anchors[window.revertAfterMenuClose-1]);
+						// $.fn.fullpage.silentMoveTo(window.anchors[window.revertAfterMenuClose-1]);
 						console.log("closing")
 			      	}
 			  });
