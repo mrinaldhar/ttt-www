@@ -173,6 +173,7 @@ ul, li {
   padding-top: 30px;
   font-family: neue-l;
   width: 50%;
+  padding-bottom: 100%;
   color: white;
   background-color: rgba(0,0,0,1);
 }

@@ -265,7 +265,7 @@ h4 a {
 }
 
   .brands_list {
-  width: 100%;
+  width: 80%;
   position: relative;
   margin: 0 auto;
 }
@@ -334,7 +334,7 @@ h4 a {
 
 section {
 	/*border-bottom: 1px solid black;*/
-	box-shadow: 0 0 15px rgba(0,0,0,0.2);
+	box-shadow: 0 0 10px rgba(0,0,0,0.2);
 }
 
 #timer {
@@ -345,6 +345,33 @@ section {
 	left: 20%;
 	right: 20%;
 	display: none;
+}
+#brandheading {
+	position: fixed;
+	display: none;
+	top: 20%;
+	width: 80%;
+	left: 10%;
+	right: 10%;
+}
+.slideControl {
+	position: fixed;
+	display: none;
+	z-index: 100;
+}
+#leftarrow {
+	left: 5%;
+	top:50%;
+	bottom: 0;
+	width: 15px;
+	transform: translate(0, -50%);
+}
+#rightarrow {
+	right: 5%;
+	top:50%;
+	bottom: 0;
+	width: 15px;
+	transform: translate(0, -50%);
 }
 	</style>
 </head>
@@ -440,10 +467,13 @@ section {
     <h1 class="sectionheader">Everyone's a storyteller</h1>
     <span class="subpara">From storifying news to condensing classics, a tale is a book that only takes a minute.</span>
     </section>
-    <section class="vertical-scrolling" id="section_brands">
+    <section class="vertical-scrolling fp-auto-height" id="section_brands">
+	    <h1 class="sectionheader" id="brandheading">Brands we've worked with</h1>
+	    <img src="./img/left.png" id="leftarrow" class="slideControl" />
+	    <img src="./img/right.png" id="rightarrow" class="slideControl" />
+
     	<div class="horizontal-scrolling">
-	        <h1 class="sectionheader">Brands we've worked with</h1>
-	        <table class="brands_list" width="100%">
+	        <table class="brands_list" width="70%">
 	        	<tr>
 	        		<td width="33%">
 			        	<img class="brand_logo" src="./img/brand_logos/amnesty.png" />
@@ -458,8 +488,7 @@ section {
 			</table>
 	    </div>
 	    <div class="horizontal-scrolling">
-	        <h1 class="sectionheader">Brands we've worked with</h1>
-			<table class="brands_list" width="100%">
+			<table class="brands_list" width="70%">
 			    <tr>
 			        <td width="33%">
 						<img class="brand_logo" src="./img/brand_logos/asianpaints.png" />
@@ -537,9 +566,20 @@ section {
 	<script>
 	$(document).ready(function() {
 			var windowWidth = $(document).width();
+					// Progressbar
+		var bar = new ProgressBar.Line('#timer', {
+		  strokeWidth: 1,
+		  easing: 'linear',
+		  duration: 7000,
+		  color: '#000000',
+		  trailColor: '#aaa',
+		  trailWidth: 1,
+		  svgStyle: {width: '100%', height: '100%'}
+		});
+
 			if (windowWidth < 767) {
 				$('.brand_logos').css("width", "100%");
-				$('.brands_list').css("width", "100%");
+				$('.brands_list').css("width", "80%");
 				// $('.brands_list tr td').css("padding-top", "10px");
 				// $('.brands_list tr td').css("padding-bottom", "10px");
 			}
@@ -560,15 +600,34 @@ section {
       		$('#menu').click(function(e) {
       			e.stopPropagation();
       		});
-		  // toggle menu 
-		  $header_top.find('a').on('click', function() {
-		    $(this).parent().toggleClass('open-menu');
-		    if ($header_top.hasClass('open-menu')) {
-		      	}
-		      	else {
-				      	$header_top.fadeOut();		      			
-		      	}
-		  });
+	
+
+			$('#leftarrow').click(function() {
+				$.fn.fullpage.moveSlideLeft();
+			});
+
+			$('#rightarrow').click(function() {
+				$.fn.fullpage.moveSlideRight();
+			});
+
+	  // toggle menu 
+			  $header_top.find('a').on('click', function() {
+			    $(this).parent().toggleClass('open-menu');
+			    if ($header_top.hasClass('open-menu')) {
+			    		console.log("Opening");
+			    		window.revertAfterMenuClose = window.lastSlideLoaded;
+			    		console.log("moving to"+window.anchors[window.revertAfterMenuClose-1])
+						$.fn.fullpage.silentMoveTo(window.anchors[window.revertAfterMenuClose-1]);
+			      	}
+			      	else {
+					      	$header_top.fadeOut();	
+						$.fn.fullpage.silentMoveTo(window.anchors[window.revertAfterMenuClose-1]);
+						console.log("closing")
+			      	}
+			  });
+
+		 window.anchors = ['firstSection', 'secondSection', 'thirdSection', 'fourthSection', 'fifthSection', 'sixthSection', 'seventhSection', 'eighthSection'];
+
 
 		$('#fullPage').fullpage({
 		    sectionSelector: '.vertical-scrolling',
@@ -577,7 +636,7 @@ section {
 		    scrollBar: true, 
 		    // navigation: true, 
 		    slidesNavigation: false,
-		    anchors: ['firstSection', 'secondSection', 'thirdSection', 'fourthSection', 'fifthSection', 'sixthSection', 'seventhSection', 'eighthSection'],
+		    anchors: window.anchors,
 		    autoScrolling: false,
 
 		    afterLoad: function(anchorLink, index) {
@@ -606,9 +665,17 @@ section {
 		        	}
 					
 
+					if (index == 7) {
+						$('#brandheading').fadeIn();
+						$('.slideControl').fadeIn();
+					}
+					else {
+						$('#brandheading').fadeOut();
+						$('.slideControl').fadeOut();
+					}
+		        }
 					beginTimer(bar, index);
 
-		        }
 		    },
 
 		    onLeave: function(index, nextIndex, direction) {
@@ -625,8 +692,8 @@ section {
             	// $('.tale_slide').css("max-width", "100%");
             }
 
-            //second slide of the second section (supposing #secondSlide is the
-            //anchor for the second slide
+            //	second slide of the second section (supposing #secondSlide is the
+            //	anchor for the second slide
             if(index == 2 && slideIndex == 'secondSlide'){
                 alert("Second slide loaded");
             }
@@ -636,19 +703,7 @@ section {
 		$.fn.fullpage.reBuild();
 
 
-		// Progressbar
-		var bar = new ProgressBar.Line('#timer', {
-		  strokeWidth: 1,
-		  easing: 'linear',
-		  duration: 7000,
-		  color: '#000000',
-		  trailColor: '#aaa',
-		  trailWidth: 1,
-		  svgStyle: {width: '100%', height: '100%'}
-		});
 
-
-	});
 function beginTimer(bar, index) {
 	if (index == 2) {
 		$('#timer').fadeIn();
@@ -664,5 +719,12 @@ function beginTimer(bar, index) {
 		bar.set(0.0);
 	}
 }
+
+
+
+	});
+
+
+
 	</script>
 </html>
