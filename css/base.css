@@ -293,3 +293,176 @@ body.fp-viewing-fifthSection-1 #menu li:last-child a {
   display: inline;
 }
 
+
+    @font-face {
+      src: url("../fonts/helvetica-ul-ttt.otf");
+      font-family: neue;
+    }
+    @font-face {
+      src: url("../fonts/helvetica-l-ttt.otf");
+      font-family: neue-l;
+    }
+
+    body, html {
+      font-family: neue-l;
+      -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+    }
+    h1, h2, h3, h4 {
+      font-weight: normal;
+    }
+    small {
+      font-size: 0.3em;
+    }
+    section {
+      text-align: center;
+    }
+    .horizontal-scrolling {
+      display: inline-block;
+      max-height: 50vh;
+    }
+    .footer {
+      position: absolute;
+      bottom: 0px;
+      left: 0px;
+      width: 100%;
+      font-size: 1.5em;
+      font-family: neue-l;
+      background-color: rgba(0,0,0,1);
+      color: white;
+      /*padding-bottom: 20px;*/
+
+    }
+    .footer tr td {
+      text-align: center;
+      padding-top: 20px;
+      padding-bottom: 20px;
+      cursor: pointer;
+    }
+    .footer tr td:hover {
+      background-color: rgba(255,255,255,1);
+      color: black;
+      border-radius: 100px;
+    }
+    .anim {
+      -o-transition:.5s;
+      -ms-transition:.5s;
+      -moz-transition:.5s;
+      -webkit-transition:.5s;
+      transition:.5s;
+    }
+
+    h1 {
+      font-size: 5em;
+    }
+
+    .header-top {
+  background: rgba(0,0,0,0.9);
+  height: 70px;
+  padding: 0 10px;
+  position: fixed;
+  color: black;
+  top: 0;
+  width: 100%;
+  display: none;
+  font-family: neue-l;
+  z-index: 12;
+  box-sizing: border-box;
+}
+
+h4 {
+  line-height: 70px;
+  height: 70px;
+  font-size: 2.5em;
+}
+
+h4 a {
+  display: block;
+  padding: 0 10px;
+}
+
+
+
+.subpara {
+  font-size: 2.2em;
+  color: rgba(0,0,0,0.5);
+  font-family: neue-l;
+  display: block;
+  width: 100%;
+  padding-left: 10%;
+  padding-right: 10%;
+  box-sizing: border-box;
+}
+.sectionheader {
+  display: block;
+  width: 100vw;
+  padding-left: 10px;
+  padding-right: 10px;
+  text-align: center;
+  margin-bottom: 40px;
+  box-sizing: border-box;
+}
+
+#fp-nav ul li a span, 
+.fp-slidesNav ul li a span {
+  background: rgb(255,255,255); 
+}
+#fp-nav {
+  opacity: 0.4;
+  display: none;
+}
+
+
+
+
+
+#timer {
+  height: 1px;
+  position: fixed;
+  bottom: 30px;
+  width: 90%;
+  left: 5%;
+  right: 5%;
+  display: none;
+  opacity: 0.2;
+}
+#brandheading {
+  position: fixed;
+  display: none;
+  top: 20%;
+  width: 80%;
+  left: 10%;
+  right: 10%;
+}
+.slideControl {
+  position: fixed;
+  display: none;
+  z-index: 100;
+}
+#leftarrow {
+  left: 5%;
+  top:50%;
+  bottom: 0;
+  width: 15px;
+  transform: translate(0, -50%);
+}
+#rightarrow {
+  right: 5%;
+  top:50%;
+  bottom: 0;
+  width: 15px;
+  transform: translate(0, -50%);
+}
+#logo_header {
+  height: 100%;
+  vertical-align: center;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  box-sizing: border-box;
+}
+
+
+
+
+
+

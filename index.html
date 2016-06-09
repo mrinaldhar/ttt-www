@@ -12,23 +12,6 @@
 	<style>
 
 
-		@font-face {
-			src: url("./fonts/helvetica-ul-ttt.otf");
-			font-family: neue;
-		}
-		@font-face {
-			src: url("./fonts/helvetica-l-ttt.otf");
-			font-family: neue-l;
-		}
-
-		body, html {
-			font-family: neue;
-			-webkit-font-smoothing: antialiased;
-			  -moz-osx-font-smoothing: grayscale;
-		}
-		h1, h2, h3, h4 {
-			font-weight: normal;
-		}
 		#logo_hero {
 			font-size: 8em;
 			width: 50%;
@@ -48,47 +31,12 @@
 			padding-bottom: 40px;
 			font-family: neue-l;
 		}
-		small {
-			font-size: 0.3em;
-		}
-		section {
-			text-align: center;
-		}
 		#section1 {
 			background-color: rgba(0,0,0,1);
 			color: white;
 		}
 		
-		.horizontal-scrolling {
-			display: inline-block;
-			max-height: 50vh;
-		}
-		.footer {
-			position: absolute;
-			bottom: 0px;
-			left: 0px;
-			width: 100%;
-			font-size: 1.5em;
-			font-family: neue-l;
-			background-color: rgba(0,0,0,1);
-			color: white;
-			/*padding-bottom: 20px;*/
-
-		}
-		.footer tr td {
-			text-align: center;
-			padding-top: 20px;
-			padding-bottom: 20px;
-			cursor: pointer;
-		}
-		.footer tr td:hover {
-			background-color: rgba(255,255,255,1);
-			color: black;
-			border-radius: 100px;
-		}
-		h1 {
-			font-size: 5em;
-		}
+		
 		.social {
 			padding-bottom: 100px;
 			margin-top: 50px;
@@ -102,59 +50,9 @@
 			font-size: 1.4em;
 			font-family: neue-l;
 		}
-		.anim {
-		  -o-transition:.5s;
-		  -ms-transition:.5s;
-		  -moz-transition:.5s;
-		  -webkit-transition:.5s;
-		  transition:.5s;
-		}
 		
-.header-top {
-	background: rgba(0,0,0,0.9);
-	height: 70px;
-	padding: 0 10px;
-	position: fixed;
-	color: black;
-	top: 0;
-	width: 100%;
-	display: none;
-	font-family: neue-l;
-	z-index: 12;
-	box-sizing: border-box;
-}
+		
 
-h4 {
-	line-height: 70px;
-	height: 70px;
-	font-size: 2.5em;
-}
-
-h4 a {
-	display: block;
-	padding: 0 10px;
-}
-
-
-.subpara {
-	font-size: 2.2em;
-	color: rgba(0,0,0,0.5);
-	font-family: neue-l;
-	display: block;
-	width: 100%;
-	padding-left: 10%;
-	padding-right: 10%;
-	box-sizing: border-box;
-}
-.sectionheader {
-	display: block;
-	width: 100vw;
-	padding-left: 10px;
-	padding-right: 10px;
-	text-align: center;
-	margin-bottom: 40px;
-	box-sizing: border-box;
-}
 .tale_slide {
 			/*width: vw;*/
 			/*max-width: 100vw;*/
@@ -168,14 +66,7 @@ h4 a {
 
 
 
-#fp-nav ul li a span, 
-.fp-slidesNav ul li a span {
-	background: rgb(255,255,255); 
-}
-#fp-nav {
-	opacity: 0.4;
-	display: none;
-}
+
 
 .brands {
 	width: 100vw;
@@ -233,103 +124,6 @@ h4 a {
 
 
 
-@media screen and (max-width: 767px) {
-  nav ul {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -webkit-flex-direction: column;
-        -ms-flex-direction: column;
-            flex-direction: column;
-  }
-
-  nav li {
-    margin-top: 1px;
-  }
-  
-  nav li a {
-    font-size: 1.5em;
-  }
-  
-  .scroll-icon {
-    display: none;
-  }
-  .mobile_nav {
-    display: inline-block;
-  }
-  .desktop_nav {
-    display: none;
-  }
-  #logo_hero {
-  font-size: 5em;
-  width: 70%;
-}
-
-  .brands_list {
-  width: 80%;
-  position: relative;
-  margin: 0 auto;
-}
-.brands_list tr td img {
-  max-width: 100%;
-}
-.brands_list tr td {
-	width: 33%;
-	padding: 20px;
-}
-.social_list {
-	width: 100%;
-}
-.social_list tr td img {
-  max-width: 100%;
-}
-.social_list tr td {
-	padding: 20px;
-}
-.sectionimage {
-	width: 90%;
-	margin-bottom: 40px;
-}
-.sectionheader {
-	margin-bottom: 40px;
-	font-size: 3.8em;
-}
-
-}
-
-@media screen and (max-height: 600px) {
-	#menu { 
-		top: 70px;
-		padding-top: 0px;
-	}
-	.sectionheader {
-		margin-bottom: 20px;
-	}
-	.sectionimage {
-		margin-bottom: 40px;
-	}
-}
-
-@media screen and (max-width: 400px) {
-  html {
-    font-size: 50%;
-  }
-  .open-menu ~ nav {
-    padding: 20px 0;
-  }
-  .mobile_nav {
-    display: inline-block;
-  }
-  .desktop_nav {
-    display: none;
-  }
-  nav li a {
-    padding: 3px;
-  }
-  .sectionheader {
-	font-size: 3.6em;
-  }
-
-}
 
 
 section {
@@ -337,51 +131,9 @@ section {
 	/*box-shadow: 0 0 10px rgba(0,0,0,0.2);*/
 }
 
-#timer {
-	height: 1px;
-	position: fixed;
-	bottom: 30px;
-	width: 90%;
-	left: 5%;
-	right: 5%;
-	display: none;
-	opacity: 0.2;
-}
-#brandheading {
-	position: fixed;
-	display: none;
-	top: 20%;
-	width: 80%;
-	left: 10%;
-	right: 10%;
-}
-.slideControl {
-	position: fixed;
-	display: none;
-	z-index: 100;
-}
-#leftarrow {
-	left: 5%;
-	top:50%;
-	bottom: 0;
-	width: 15px;
-	transform: translate(0, -50%);
-}
-#rightarrow {
-	right: 5%;
-	top:50%;
-	bottom: 0;
-	width: 15px;
-	transform: translate(0, -50%);
-}
-#logo_header {
-	height: 100%;
-	vertical-align: center;
-	padding-top: 5px;
-	padding-bottom: 5px;
-	box-sizing: border-box;
-}
 	</style>
+	<link rel="stylesheet" href="./css/media.css" />
+
 </head>
 <body>
 <header>
@@ -393,9 +145,11 @@ section {
           <i></i>
         </a>
         <ul class="l-right desktop_nav" id="desktop_menu">
-			<li class="anim">
-        		collaborate
-        	</li>
+			<a href="collaborate.html">
+				<li class="anim">
+	        		collaborate
+	        	</li>
+	        </a>
         	<li class="anim">
         		events
         	</li>
@@ -413,9 +167,11 @@ section {
 
       <nav class="hide" style="background-color: black;">
         <ul id="menu">
-        	<li class="anim">
-        		collaborate
-        	</li>
+        	<a href="collaborate.html">
+        		<li class="anim">
+	        		collaborate
+	        	</li>
+	        </a>
         	<li class="anim">
         		events
         	</li>
@@ -458,7 +214,7 @@ section {
     <section class="vertical-scrolling">
     <img src="./img/typing.png" class="sectionimage" />
     <h1 class="sectionheader">Long story short</h1>
-    <span class="subpara">From storifying news to condensing classics, a tale is a book that only takes a minute.</p>
+    <span class="subpara">From storifying news to condensing classics, a tale is a book that only takes a minute.</span>
     </section>
     <section class="vertical-scrolling">
     <img src="./img/typing.png" class="sectionimage" />
