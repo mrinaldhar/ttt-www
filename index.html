@@ -79,10 +79,6 @@
 	color: white;
 }
 
-/*.slide_title {
-	padding-left: 10px;
-	padding-right: 10px;
-}*/
 
 .social_list {
 	width: 80vw;
@@ -90,7 +86,6 @@
 	margin: 0 auto;
 }
 .social_list tr td img {
-	/*max-width: 50%;*/
 	width: auto;
 	max-height: 4vh;
 }
@@ -104,16 +99,6 @@
 .sectionimage {
 	width: 45%;
 	margin-bottom: 60px;
-}
-
-
-
-
-
-
-section {
-	/*border-bottom: 1px solid black;*/
-	/*box-shadow: 0 0 10px rgba(0,0,0,0.2);*/
 }
 
 	</style>
@@ -331,13 +316,10 @@ section {
 			if (windowWidth < 767) {
 				$('.brand_logos').css("width", "100%");
 				$('.brands_list').css("width", "80%");
-				// $('.brands_list tr td').css("padding-top", "10px");
-				// $('.brands_list tr td').css("padding-bottom", "10px");
 			}
 		 // variables
 		  var $header_top = $('.header-top');
 		  var $nav = $('nav');
-      	// $('.tale_slide').css('height', window.height/2);
 
       		$nav.click(function() {
 			    $header_top.toggleClass('open-menu');
@@ -395,9 +377,7 @@ section {
 		      window.lastSlideLoaded = index;
 		      $header_top.css('background', 'rgba(0,0,0, 1)');
 		      $nav.css('background', 'rgba(0,0,0,0.9)');
-		      $('#fp-nav ul li a span, .fp-slidesNav ul li a span').css('background', 'rgb(0,0,0)'); 
 		      if (index == 1) {
-		      $('#fp-nav').fadeOut(); 
 		      	if ($header_top.hasClass('open-menu')) {
 		      	}
 		      	else {
@@ -406,7 +386,6 @@ section {
 		      }
 		        else {
 			      	$header_top.fadeIn();
-			      $('#fp-nav').fadeIn(); 
 		        	if (index == 7) {
 				      $('#fp-nav ul li a span, .fp-slidesNav ul li a span').css('background', 'rgb(255,255,255)'); 
 
@@ -427,56 +406,34 @@ section {
 					}
 		        }
 					beginTimer(bar, index);
-
 		    },
 
 		    onLeave: function(index, nextIndex, direction) {
-		      if(index == 5) {
-		        // $('#fp-nav').show();
-		      }
 		    },
 
 		    afterSlideLoad: function( anchorLink, index, slideAnchor, slideIndex){
             var loadedSlide = $(this);
-
-            //first slide of the second section
-            if(index == 2 && slideIndex == 0){
-            	// $('.tale_slide').css("max-width", "100%");
-            }
-
-            //	second slide of the second section (supposing #secondSlide is the
-            //	anchor for the second slide
-            if(index == 2 && slideIndex == 'secondSlide'){
-                alert("Second slide loaded");
-            }
         }
 
 		});
 		$.fn.fullpage.reBuild();
 
 
-
-function beginTimer(bar, index) {
-	if (index == 2) {
-		$('#timer').fadeIn();
-		bar.set(0.0);
-		bar.animate(1.0, function() {
-			$.fn.fullpage.moveSlideRight();
-			beginTimer(bar, index);
-		}); 
+	function beginTimer(bar, index) {
+		if (index == 2) {
+			$('#timer').fadeIn();
+			bar.set(0.0);
+			bar.animate(1.0, function() {
+				$.fn.fullpage.moveSlideRight();
+				beginTimer(bar, index);
+			}); 
+		}
+		else {
+			$('#timer').fadeOut();
+			bar.stop();
+			bar.set(0.0);
+		}
 	}
-	else {
-		$('#timer').fadeOut();
-		bar.stop();
-		bar.set(0.0);
-	}
-}
-
-
-
-	});
-
-
-
+});
 	</script>
 </html>
