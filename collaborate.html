@@ -44,20 +44,10 @@
 		display: block;
 	}
 	.sectionheader:not(.no-space) {
-		color: rgb(255,255,255); 
 	    margin-bottom: 100px;
 	}
 	.subpara:not(.no-space) {
 		margin-top: 100px;
-		color: rgba(255,255,255, 0.5); 
-	}
-	.sectionheader {
-		color: rgb(255,255,255); 
-	    mix-blend-mode: difference;
-	}
-	.subpara {
-		color: rgb(255,255,255); 
-		mix-blend-mode: difference;
 	}
 	.userform {
 		width: 80%;
@@ -85,6 +75,16 @@
 		border: 0px;
 		color: white;
 	}
+	.sectionheader {
+		color: black;
+	}
+	.black-page.sectionheader {
+		color: white;
+	}
+	.black-page.subpara {
+		color: rgba(255,255,255,0.7);
+	}
+	
 	</style>
 	<link rel="stylesheet" href="./css/media.css" />
 
@@ -141,7 +141,7 @@
 
     <div id="fullPage">
 	    <section class="vertical-scrolling">
-		    <h1 class="sectionheader">let's tell it together</h1>
+		    <h1 class="sectionheader black-page">let's tell it together</h1>
 	    </section>
 
 		<section class="vertical-scrolling">
@@ -152,8 +152,8 @@
 
 	    <section class="vertical-scrolling">
 		    <!-- <img src="./img/typing.png" class="sectionimage" /> -->
-		    <h1 class="sectionheader">Collaboration is the new creation</h1>
-		    <span class="subpara">We bring life to the stories you want to tell. <br />With us, give your brand a voice.</span>
+		    <h1 class="sectionheader black-page">Collaboration is the new creation</h1>
+		    <span class="subpara black-page">We bring life to the stories you want to tell. <br />With us, give your brand a voice.</span>
 	    </section>
 
 		<section class="vertical-scrolling">
@@ -165,8 +165,8 @@
 
 		<section class="vertical-scrolling">
 		    <!-- <img src="./img/typing.png" class="sectionimage" /> -->
-		    <h1 class="sectionheader">Or, tailored around you</h1>
-		    <span class="subpara">We bring life to the stories you want to tell. <br />With us, give your brand a voice.</span>
+		    <h1 class="sectionheader black-page">Or, tailored around you</h1>
+		    <span class="subpara black-page">We bring life to the stories you want to tell. <br />With us, give your brand a voice.</span>
 	    </section>
 
 	    <section class="vertical-scrolling">
@@ -177,8 +177,8 @@
 
 	    <section class="vertical-scrolling">
 		    <!-- <img src="./img/typing.png" class="sectionimage" /> -->
-		    <h1 class="sectionheader">Or, leave it to us</h1>
-		    <span class="subpara">You could also entrust our hand-picked team of stellar writers from within our community to tell your stories.
+		    <h1 class="sectionheader black-page">Or, leave it to us</h1>
+		    <span class="subpara black-page">You could also entrust our hand-picked team of stellar writers from within our community to tell your stories.
 			</span>
 	    </section>
 
@@ -213,7 +213,7 @@
 
 	    <section class="vertical-scrolling">
 		    <!-- <img src="./img/typing.png" class="sectionimage" /> -->
-		    <h1 class="sectionheader">See how some of our global brand partners tell their stories with us.</h1>
+		    <h1 class="sectionheader black-page">See how some of our global brand partners tell their stories with us.</h1>
 		    <table class="brands_list" width="70%">
 			    <tr>
 			        <td width="33%">
@@ -237,7 +237,7 @@
 
 	     <section class="vertical-scrolling fp-auto-height">
 		    <!-- <img src="./img/typing.png" class="sectionimage" /> -->
-		    <h1 class="sectionheader no-space">Want us to tell your story?</h1>
+		    <h1 class="sectionheader no-space black-page">Want us to tell your story?</h1>
 		    <form class="userform">
 		    	<input type="text" placeholder="full name" />
 		    	<input type="text" placeholder="organisation" />
@@ -359,6 +359,7 @@
 			      	$header_top.fadeIn();
 			      $('#fp-nav').fadeIn(); 
 			  // }
+
 		    },
 
 		    onLeave: function(index, nextIndex, direction) {
@@ -374,6 +375,8 @@
             if(index == 2 && slideIndex == 0){
             	// $('.tale_slide').css("max-width", "100%");
             }
+
+
 
             //	second slide of the second section (supposing #secondSlide is the
             //	anchor for the second slide
