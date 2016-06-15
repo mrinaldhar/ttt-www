@@ -372,9 +372,6 @@ nav li a {
 }
 
 .footer tr td:hover {
-	background-color: rgba(255,255,255,1);
-	color: black;
-	border-radius: 100px;
 }
 
 /* –––––––––––––––––––––––––––––––––––––––––––––––––– */
