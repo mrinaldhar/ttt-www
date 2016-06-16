@@ -4,7 +4,7 @@
 	<link rel="shortcut icon" href="./favico.jpg" type="image/x-icon">
 	<link rel="icon" href="./favico.jpg" type="image/x-icon">
 	<title>
-		terribly tiny tales | careers
+		terribly tiny tales | stttore
 	</title>
 	<link rel="stylesheet" href="./css/fullpage.css" />
 	<link rel="stylesheet" href="./css/base.css" />
@@ -14,9 +14,7 @@
 			/*float: left;*/
 			position: absolute;
 			height: 70px;
-			width: 20%;
-			left: 40%;
-			margin: 0 auto;
+			width: 100%;
 			color: white;
 		}
 		#logo_header {
@@ -44,12 +42,12 @@
 			margin-top: -10px;
 			display: block;
 		}
-		.sectionheader:not(.no-space) {
+		/*.sectionheader:not(.no-space) {
 		    margin-bottom: 100px;
 		}
 		.subpara:not(.no-space) {
 			margin-top: 100px;
-		}
+		}*/
 		.userform {
 			width: 80%;
 			margin: 0 auto;
@@ -99,32 +97,24 @@
 			color: black;
 			text-decoration: underline;
 		}
-		#photos {
-		  /* Prevent vertical gaps */
-		  line-height: 0;
-		  width: 90%;
-		  margin: 0 auto;
-		  -webkit-column-count: 5;
-		  -webkit-column-gap:   0px;
-		  -moz-column-count:    5;
-		  -moz-column-gap:      0px;
-		  column-count:         5;
-		  column-gap:           0px;  
+		small {
+			font-size: 70%;
 		}
-
-		#photos img {
-		  /* Just in case there are inline attributes */
-		  width: 100% !important;
-		  height: auto !important;
-		  padding: 2px;
-		  box-sizing: border-box;
+		.sectionheader a {
+			color: black;
+			text-decoration: underline;
 		}
-		@media (max-width: 1200px) {
-		  #photos {
-		  -moz-column-count:    4;
-		  -webkit-column-count: 4;
-		  column-count:         4;
-		  }
+		.buy_btn {
+			position: absolute;
+			background-color: black;
+			right: 10%;
+			color: white;
+			outline-width: 0px;
+			border: 0px;
+			padding-left: 10px;
+			padding-right: 10px;
+			padding-top: 5px;
+			padding-bottom: 5px;
 		}
 	</style>
 	<link rel="stylesheet" href="./css/media.css" />
@@ -135,7 +125,7 @@
 	<header>
       <div class="header-top clearfix">
         <h4 class="l-left"><a href="index.html"><img src="./img/logo_monogram.jpg" id="logo_header"></a></h4>
-        <h4 class="l-center">careers</h4>
+        <h4 class="l-center">stttore</h4>
         <a class="l-right toggle-menu mobile_nav" href="#">
           <i></i>
           <i></i>
@@ -219,22 +209,29 @@
 
     <div id="fullPage">
 	    <section class="vertical-scrolling">
-		    <h1 class="sectionheader black-page">If words are your life, <br />make it your living.</h1>
+		    <h1 class="sectionheader black-page">stttore.com<br /><br /><small><i>take us home</i></small></h1>
 	    </section>
 
 		<section class="vertical-scrolling">
-		    <h1 class="sectionheader sectionheader-left no-space">Work with the world's largest social storytelling platform.</h1>
-		    <span class="subpara no-space">Mail us your best work, resume and cover-letter to <a href="mailto:hello@terriblytinytales.com">hello@terriblytinytales.com</a>.</span>
+		    <h1 class="sectionheader">TTTEES</h1>
+		    <img src="./img/typing.png" class="sectionimage" />
+		    <span class="subpara">#curious<button class="buy_btn">buy</button><br />$ 400</span>
+	    </section>
+
+	    <section class="vertical-scrolling">
+		    <h1 class="sectionheader">TAILORED FRAMES</h1>
+		    <img src="./img/typing.png" class="sectionimage" />
+		    <span class="subpara">postcard frame<button class="buy_btn">buy</button><br />$ 2500</span>
+	    </section>
+
+	    <section class="vertical-scrolling">
+		    <h1 class="sectionheader">TTT Official Journal</h1>
+		    <img src="./img/typing.png" class="sectionimage" />
+		    <span class="subpara">ttt journal<button class="buy_btn">buy</button><br />$ 2500</span>
 	    </section>
 
 	    <section class="vertical-scrolling fp-auto-height">
-	    	<section id="photos">
-			  <img src="./img/careers/1.jpeg" />
-			  <img src="./img/careers/2.jpeg" />
-			  <img src="./img/careers/3.jpeg" />
-			  <img src="./img/careers/4.jpeg" />
-			  <img src="./img/careers/5.jpeg" />
-			</section>
+		    <h1 class="sectionheader">You can get more of our, official TTT merchandise <a href="http://stttore.com">here</a>.</h1>
     	<table class="footer">
     		<tr>
     			<td width="30%" class="anim">
@@ -319,7 +316,7 @@
 		    scrollBar: true, 
 		    slidesNavigation: false,
 		    autoScrolling: true,
-		    sectionsColor: ['black', 'white', 'white'],
+		    sectionsColor: ['black', 'white'],
 
 		    afterLoad: function(anchorLink, index) {
 		      window.lastSlideLoaded = index;
