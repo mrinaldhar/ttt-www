@@ -228,12 +228,12 @@ h4 a {
 }
 
 #menu li {
-	font-size: 2.8em;
-	padding-top: 25px;
-	padding-bottom: 25px;
+	font-size: 2.3em;
+	padding-top: 15px;
+	padding-bottom: 15px;
 	padding-left: 20px;
 	padding-right: 0px;
-	border-bottom: 1px solid rgba(255,255,255,0.5);
+	/*border-bottom: 1px solid rgba(255,255,255,0.5);*/
 	cursor: pointer;
 	display: block;
 }
@@ -306,7 +306,7 @@ nav li {
 nav li a {
 	font-size: 2em;
 	display: block;
-	padding: 30px;
+	padding: 20px;
 	text-align: center;
 	-webkit-transition: background .3s;
 	transition: background .3s;
@@ -319,6 +319,10 @@ nav li a {
 
 .desktop_nav {
 	display: inline;
+}
+
+.bottom-rule {
+	border-bottom: 1px solid rgba(255,255,255,0.5);
 }
 
 /* –––––––––––––––––––––––––––––––––––––––––––––––––– */
@@ -348,8 +352,8 @@ nav li a {
 #logo_header {
 	height: 100%;
 	vertical-align: center;
-	padding-top: 5px;
-	padding-bottom: 5px;
+	padding-top: 0px;
+	padding-bottom: 0px;
 	box-sizing: border-box;
 }
 

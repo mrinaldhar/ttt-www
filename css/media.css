@@ -93,6 +93,11 @@
   input {
     padding: 3px;
   }
+  #menu li {
+    font-size: 1.8em;
+    padding-top: 12px;
+    padding-bottom: 12px;
+  }
 }
 
 @media screen and (max-width: 400px) {
