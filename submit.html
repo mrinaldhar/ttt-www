@@ -97,6 +97,7 @@
 			color: black;
 			text-decoration: underline;
 		}
+		
 	</style>
 	<link rel="stylesheet" href="./css/media.css" />
 </head>
@@ -203,17 +204,14 @@
 
 
 
-    <div id="fullPage">
-	    <section class="vertical-scrolling">
-		    <h1 class="sectionheader black-page">write here, write now</h1>
-	    </section>
-
-		<section class="vertical-scrolling">
-		    <h1 class="sectionheader sectionheader-left">Got a tale to tell? A story, a rant, a poem, a musing? <br /><br />We're all eyes.</h1>
-		    <span class="subpara">Submit your tale, or #glimpses, right <a href="#">here</a>.</span>
-	    </section>
-
-	    <section class="vertical-scrolling fp-auto-height">
+	<div id="fullPage" class="noplugin nospace">
+		<div class="landing-content">
+			    <h1 class="sectionheader">write here, write now</h1>
+		</div>
+    	<div id="page-content">
+		    <h1>Got a tale to tell? A story, a rant, a poem, a musing? <br /><br />We're all eyes.</h1>
+		    <h2>Submit your tale, or #glimpses, right <a href="#">here</a>.</h2>
+		</div>
     	<table class="footer">
     		<tr>
     			<td width="30%" class="anim">
@@ -244,8 +242,6 @@
     			</td>
     		</tr>
     	</table>
-    </section> 
-
 	</div>
 
 
@@ -316,6 +312,7 @@
 
 		});
 		$.fn.fullpage.reBuild();
+		$.fn.fullpage.destroy();
 });
 	</script>
 </html>
