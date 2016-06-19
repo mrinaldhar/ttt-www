@@ -104,19 +104,7 @@
 			color: black;
 			text-decoration: underline;
 		}
-		.buy_btn {
-			position: absolute;
-			background-color: black;
-			right: 10%;
-			color: white;
-			outline-width: 0px;
-			border: 0px;
-			padding-left: 10px;
-			font-size: 1em;
-			padding-right: 10px;
-			padding-top: 5px;
-			padding-bottom: 5px;
-		}
+
 	</style>
 	<link rel="stylesheet" href="./css/media.css" />
 </head>
@@ -223,31 +211,45 @@
 
 
 
-    <div id="fullPage">
-	    <section class="vertical-scrolling">
-		    <h1 class="sectionheader black-page">stttore.com<br /><br /><small><i>take us home</i></small></h1>
-	    </section>
+<div id="fullPage" class="noplugin nospace">
+		<div class="landing-content">
+			    <h1 class="sectionheader">stttore.com<br /><br /><small><i>take us home</i></small></h1>
+		</div>
+    	<div id="page-content">
+		    <h2>You can get more of our, official TTT merchandise <a href="http://stttore.com">here</a>.</h2>
 
-		<section class="vertical-scrolling">
-		    <h1 class="sectionheader">TTTEES</h1>
-		    <img src="./img/typing.png" class="sectionimage" />
-		    <span class="subpara">#curious<button class="buy_btn">buy</button><br />&#8377; 400</span>
-	    </section>
+		    <h2>TTTEES</h2>
+		    <img src="./img/stttore/curious.jpg" class="sectionimage" />
 
-	    <section class="vertical-scrolling">
-		    <h1 class="sectionheader">TAILORED FRAMES</h1>
-		    <img src="./img/typing.png" class="sectionimage" />
-		    <span class="subpara">postcard frame<button class="buy_btn">buy</button><br />&#8377; 2500</span>
-	    </section>
+		    <hr />
 
-	    <section class="vertical-scrolling">
-		    <h1 class="sectionheader">TTT Official Journal</h1>
-		    <img src="./img/typing.png" class="sectionimage" />
-		    <span class="subpara">ttt journal<button class="buy_btn">buy</button><br />&#8377; 2500</span>
-	    </section>
+			<h2>TTT Official Journal</h2>
+		    <img src="./img/stttore/frame.png" class="sectionimage" />
 
-	    <section class="vertical-scrolling fp-auto-height">
-		    <h1 class="sectionheader">You can get more of our, official TTT merchandise <a href="http://stttore.com">here</a>.</h1>
+		    <hr />
+
+		    <h2>TTT Hoodie</h2>
+		    <img src="./img/stttore/hoodie.png" class="sectionimage" />
+
+		    <hr />
+
+		    <h2>Get custom-written tales delivered to your doorstep - or to someone else's.
+				<br /><br />Give your story, <a href="#">our tale</a>.</h2>
+
+		    <hr />
+
+		    <h2>Tailored Frames</h2>
+		    <img src="./img/stttore/frame.png" class="sectionimage" />
+
+		    <hr />
+
+		    <h2>We've got a lot more in <a href="http://stttore.com/">stttore</a> for you.</h2>
+
+
+		    
+
+    	</div>
+
     	<table class="footer">
     		<tr>
     			<td width="30%" class="anim">
@@ -278,7 +280,7 @@
     			</td>
     		</tr>
     	</table>
-    </section> 
+    </div>
 
 	</div>
 
@@ -350,6 +352,7 @@
 
 		});
 		$.fn.fullpage.reBuild();
+		$.fn.fullpage.destroy();
 });
 	</script>
 </html>

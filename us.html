@@ -118,19 +118,12 @@
 			padding-top: 30px;
 			padding-bottom: 30px;
 		}
-		h2, h3 {
-			color: white;
-		}
-		h2 {
-			font-size: 2.5em;
-			margin-bottom: 10px;
-			margin-top: 40px;
-		}
 		h3 {
 			font-size: 2em;
 		}
 		h3 a {
 			text-decoration: underline;
+			color: black;
 		}
 		.map {
 			max-height: 45vh;
@@ -142,6 +135,9 @@
 			color: white;
 			margin-top: 30px;
 			line-height: 1.5em;
+		}
+		#page-content {
+			text-align: center;
 		}
 	</style>
 	<link rel="stylesheet" href="./css/media.css" />
@@ -249,13 +245,16 @@
 
 
 
-    <div id="fullPage">
-	    <section class="vertical-scrolling">
-		    <h1 class="sectionheader black-page">welcome to the tttribe</h1>
-	    </section>
 
-		<section class="vertical-scrolling fp-auto-height">
-		    <h1 class="sectionheader no-space">Team</h1>
+    <div id="fullPage" class="noplugin nospace">
+    	<div class="landing-content">
+			    <h1>welcome to the tttribe</h1>
+		</div>
+    	<div id="page-content">
+
+		    <h1 style="text-align: center;">Team</h1>
+		    <br />
+		    <br />
 		    <span class="team_member">
     			<img class="team_member_pic" src="./img/team/anuj.png" />
     			<span class="team_member_name"><b>Anuj Gosalia</b><br />Co-Founder &amp; CCO</span>
@@ -281,10 +280,6 @@
     			<span class="team_member_name"><b>Chintan Ruparel</b><br />Co-Founder &amp; CCO</span>
     		</span>
     		
-    		
-	    </section>
-
-	    <section class="vertical-scrolling fp-auto-height" style="padding: 0px;">
     		<span class="team_member">
     			<img class="team_member_pic" src="./img/team/anuj.png" />
     			<span class="team_member_name"><b>Anuj Gosalia</b><br />Co-Founder &amp; CCO</span>
@@ -317,10 +312,11 @@
     			<img class="team_member_pic" src="./img/team/chintan.jpg" />
     			<span class="team_member_name"><b>Chintan Ruparel</b><br />Co-Founder &amp; CCO</span>
     		</span>
-	    </section>
 
-	    <section class="vertical-scrolling">
-		    <h1 class="sectionheader black-page no-space">Contact us</h1>
+    		<hr />
+
+		    <h1 style="text-align: center;">Contact us</h1>
+		    <br />
 		    <br />
 		    <h2>Brand collaborations</h2>
 			<h3><a href="collaborate.html#thirteenthSection"><i>let's tell it together</i></a></h3>
@@ -339,12 +335,14 @@
 			
 			<h2>Coffee?</h2>
 			<h3>Come on over.</h3>
-	    </section>
+			<hr />
 
-	    <section class="vertical-scrolling fp-auto-height">
-	    	<img src="./img/map.png" class="map" />
-		    <span class="subpara no-space">608, Crescent Business Park, Near SakiNaka Telephone Exchange, <br />Sakinaka, Andheri East, Mumbai, Maharashtra 400072. INDIA.</span>
+    	<img src="./img/map.png" class="map" />
+    	<br />
+    	<br />
+	    <h2>608, Crescent Business Park, Near SakiNaka Telephone Exchange, <br />Sakinaka, Andheri East, Mumbai, Maharashtra 400072. INDIA.</h2>
 	    	
+    </div>
 
     	<table class="footer">
     		<tr>
@@ -376,8 +374,7 @@
     			</td>
     		</tr>
     	</table>
-    </section> 
-
+ 
 	</div>
 
 
@@ -445,6 +442,7 @@
 
 		});
 		$.fn.fullpage.reBuild();
+		$.fn.fullpage.destroy();
 
 });
 	</script>
