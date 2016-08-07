@@ -173,6 +173,7 @@ h4 a {
 .noplugin .footer {
 	position: relative;
 	margin-bottom: 0px;
+	margin-top: 0px;
 }
 #page-content {
 	padding-left: 10%;

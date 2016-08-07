@@ -4,7 +4,7 @@
 	<link rel="shortcut icon" href="./favico.jpg" type="image/x-icon">
 	<link rel="icon" href="./favico.jpg" type="image/x-icon">
 	<title>
-		terribly tiny tales | us
+		terribly tiny tales | faqs
 	</title>
 	<link rel="stylesheet" href="./css/fullpage.css" />
 	<link rel="stylesheet" href="./css/base.css" />
@@ -14,7 +14,8 @@
 			/*float: left;*/
 			position: absolute;
 			height: 70px;
-			width: 100%;
+			width: 80%;
+			left: 10%;
 			color: white;
 		}
 		#logo_header {
@@ -42,12 +43,12 @@
 			margin-top: -10px;
 			display: block;
 		}
-		.sectionheader:not(.no-space) {
+		/*.sectionheader:not(.no-space) {
 		    margin-bottom: 100px;
 		}
 		.subpara:not(.no-space) {
 			margin-top: 100px;
-		}
+		}*/
 		.userform {
 			width: 80%;
 			margin: 0 auto;
@@ -83,61 +84,43 @@
 		.black-page.subpara {
 			color: rgba(255,255,255,0.7);
 		}
-		.team_member {
-			width: 45%;
-			max-width: 45%;
-			display: inline-block;
-			text-align: center;
-			margin-bottom: 30px;
-			padding-left: 1px;
-			padding-right: 1px;
-			box-sizing: border-box;
-		}
-		.team_member_pic {
-			width: 40%;
-			max-width: 40%;
+		.sectionheader-left {
+			text-align: left;
 			margin: 0 auto;
-			border-radius: 50%;
-			display: block;
-		}
-		.team_member_name {
-			display: block;
-			font-size: 0.5em;
-			margin-top: 20px;
-			line-height: 1.6em;
-			text-transform: uppercase;
-		}
-		.team_member_name b {
-			font-weight: 900;
-		}
-		.sectionheader {
-
-		}
-		.vertical-scrolling:not(.no-space) {
-			margin: 0px;
-			padding-top: 30px;
-			padding-bottom: 30px;
-		}
-		h3 {
-			font-size: 2em;
-		}
-		h3 a {
-			text-decoration: underline;
-			color: black;
-		}
-		.map {
-			max-height: 45vh;
-			max-width: 80vw;
-			display: block;
-			margin: 0 auto;
+			width: 85%;
 		}
 		.subpara {
-			color: white;
-			margin-top: 30px;
-			line-height: 1.5em;
+			color: black;
+			text-align: left;
+			padding-left: 10%;
 		}
-		#page-content {
-			text-align: center;
+		.subpara a {
+			color: black;
+			text-decoration: underline;
+		}
+		small {
+			font-size: 70%;
+		}
+		.sectionheader a {
+			color: black;
+			text-decoration: underline;
+		}
+		.faq .answer {
+			display: none;
+		}
+		.faq .question {
+			border-top: 1px solid rgba(0,0,0,0.1);
+			cursor: pointer;
+		}
+		.faq .question h2 {
+			margin-top: 20px;
+			margin-bottom: 20px;
+			font-size: 2.4em;
+			width: 100%;
+		}
+		.faq .question .down_arrow {
+			max-height: 10px;
+			float: right;
 		}
 	</style>
 	<link rel="stylesheet" href="./css/media.css" />
@@ -148,7 +131,7 @@
 	<header>
       <div class="header-top clearfix">
         <h4 class="l-left"><a href="index.html"><img src="./img/logo_monogram.jpg" id="logo_header"></a></h4>
-        <h4 class="l-center">us</h4>
+        <h4 class="l-center">faqs</h4>
         <a class="l-right toggle-menu mobile_nav" href="#">
           <i></i>
           <i></i>
@@ -216,7 +199,7 @@
 	        	</li>
 	        </a>
 
-        	<li class="anim no-hover">
+        	<li class="anim">
         		<table class="social_list_menu" width="100%">
 		        	<tr>
 		        		<td width="20%">
@@ -245,108 +228,64 @@
 
 
 
-
-    <div id="fullPage" class="noplugin nospace">
-    	<div class="landing-content">
-			    <h1>welcome to the tttribe</h1>
-		</div>
+    <div id="fullPage" class="noplugin">
     	<div id="page-content">
+	    	<div class="faq">
+	    		<div class="question">
+	    			<h2><img src="./img/down.png" class="down_arrow" />1. Question</h2>
+	    		</div>
+	    		<div class="answer">
+	    			<p>Terribly Tiny Tales ("us", "we", or "our") operates the www.terriblytinytales.com website (the "Service"). This page informs you of our policies regarding the collection, use and disclosure of Personal Information when you use our Service.</p>
+	    		</div>
+	    	</div>
 
-		    <h1 style="text-align: center;">Team</h1>
-		    <br />
-		    <br />
-		    <span class="team_member">
-    			<img class="team_member_pic" src="./img/team/anuj.png" />
-    			<span class="team_member_name"><b>Anuj Gosalia</b><br />Co-Founder &amp; CEO</span>
-    		</span>
-    		<span class="team_member">
-    			<img class="team_member_pic" src="./img/team/chintan.jpg" />
-    			<span class="team_member_name"><b>Chintan Ruparel</b><br />Co-Founder &amp; CCO</span>
-    		</span>
-    		<span class="team_member">
-    			<img class="team_member_pic" src="./img/team/anshuman.png" />
-    			<span class="team_member_name"><b>Anshuman Ghosh</b><br />Chief Technical Officer</span>
-    		</span>
-    		<span class="team_member">
-    			<img class="team_member_pic" src="./img/team/ESHA.png" />
-    			<span class="team_member_name"><b>Esha Manwani</b><br />Senior Business Lead</span>
-    		</span>
-    		<span class="team_member">
-    			<img class="team_member_pic" src="./img/team/chintan.jpg" />
-    			<span class="team_member_name"><b>Joel Thottan</b><br />Assistant Curator</span>
-    		</span>
-    		<span class="team_member">
-    			<img class="team_member_pic" src="./img/team/SHAMEEN.png" />
-    			<span class="team_member_name"><b>Shameen Khatri</b><br />Senior Designer</span>
-    		</span>
-    		
-    		<span class="team_member">
-    			<img class="team_member_pic" src="./img/team/SHRUTI.png" />
-    			<span class="team_member_name"><b>Shruti Kode</b><br />Junior Business Lead</span>
-    		</span>
-    		<span class="team_member">
-    			<img class="team_member_pic" src="./img/team/Tapoja.png" />
-    			<span class="team_member_name"><b>Tapoja Roy</b><br />Junior Content Lead</span>
-    		</span>
-    		<span class="team_member">
-    			<img class="team_member_pic" src="./img/team/SHREYA.png" />
-    			<span class="team_member_name"><b>Shreya Bhagattjee</b><br />Lead - Events</span>
-    		</span>
-    		<span class="team_member">
-    			<img class="team_member_pic" src="./img/team/ADITI.png" />
-    			<span class="team_member_name"><b>Aditi Maheshwari</b><br />Junior business lead</span>
-    		</span>
-    		<span class="team_member">
-    			<img class="team_member_pic" src="./img/team/SANJANA.jpg" />
-    			<span class="team_member_name"><b>Sanjana Singh</b><br />Junior content lead</span>
-    		</span>
-    		<span class="team_member">
-    			<img class="team_member_pic" src="./img/team/PALAK.png" />
-    			<span class="team_member_name"><b>Palak Kapadia</b><br />Community Manager</span>
-    		</span>
-    		<span class="team_member">
-    			<img class="team_member_pic" src="./img/team/SHREYA.png" />
-    			<span class="team_member_name"><b>Ami Desai</b><br />Admin Head</span>
-    		</span>
-    		<span class="team_member">
-    			<img class="team_member_pic" src="./img/team/SHREYA.png" />
-    			<span class="team_member_name"><b>Nikesh</b><br />Office Boy</span>
-    		</span>
-    		<span class="team_member">
-    			<img class="team_member_pic" src="./img/team/chintan.jpg" />
-    			<span class="team_member_name"><b>You?</b><br />Work with us</span>
-    		</span>
+	    	<div class="faq">
+	    		<div class="question">
+	    			<h2><img src="./img/down.png" class="down_arrow" />2. Question 2</h2>
+	    		</div>
+	    		<div class="answer">
+	    			<p>Terribly Tiny Tales ("us", "we", or "our") operates the www.terriblytinytales.com website (the "Service"). This page informs you of our policies regarding the collection, use and disclosure of Personal Information when you use our Service.</p>
+	    		</div>
+	    	</div>
 
-    		<hr />
+	    	<div class="faq">
+	    		<div class="question">
+	    			<h2><img src="./img/down.png" class="down_arrow" />3. Question 3</h2>
+	    		</div>
+	    		<div class="answer">
+	    			<p>Terribly Tiny Tales ("us", "we", or "our") operates the www.terriblytinytales.com website (the "Service"). This page informs you of our policies regarding the collection, use and disclosure of Personal Information when you use our Service.</p>
+	    		</div>
+	    	</div>
 
-		    <h1 style="text-align: center;">Contact us</h1>
-		    <br />
-		    <br />
-		    <h2>Brand collaborations</h2>
-			<h3><a href="collaborate.html#thirteenthSection"><i>let's tell it together</i></a></h3>
+	    	<div class="faq">
+	    		<div class="question">
+	    			<h2><img src="./img/down.png" class="down_arrow" />1. Question 1</h2>
+	    		</div>
+	    		<div class="answer">
+	    			<p>Terribly Tiny Tales ("us", "we", or "our") operates the www.terriblytinytales.com website (the "Service"). This page informs you of our policies regarding the collection, use and disclosure of Personal Information when you use our Service.</p>
+	    		</div>
+	    	</div>
 
-			<h2>Events &amp; Workshops</h2>
-			<h3><a href="events.html#form"><i>talking, writing and more</i></a></h3>
-			
-			<h2>Submit</h2>
-			<h3><a href="submit.html"><i>write here, write now</i></a></h3>
-			
-			<h2>Careers</h2>
-			<h3><a href="careers.html"><i>work with us</i></a></h3>
-			
-			<h2>Stttore</h2>
-			<h3><a href="http://stttore.com"><i>take us home</i></a></h3>
-			
-			<h2>Coffee?</h2>
-			<h3>Come on over.</h3>
-			<hr />
+	    	<div class="faq">
+	    		<div class="question">
+	    			<h2><img src="./img/down.png" class="down_arrow" />1. Question 1</h2>
+	    		</div>
+	    		<div class="answer">
+	    			<p>Terribly Tiny Tales ("us", "we", or "our") operates the www.terriblytinytales.com website (the "Service"). This page informs you of our policies regarding the collection, use and disclosure of Personal Information when you use our Service.</p>
+	    		</div>
+	    	</div>
 
-    	<img src="./img/map.png" class="map" />
-    	<br /><br /><br />
-	    <p>608, Crescent Business Park, Near SakiNaka Telephone Exchange, Sakinaka, Andheri East, Mumbai, Maharashtra 400072. INDIA.</p>
-	    	
-    </div>
+	    	<div class="faq">
+	    		<div class="question">
+	    			<h2><img src="./img/down.png" class="down_arrow" />2. Question 2</h2>
+	    		</div>
+	    		<div class="answer">
+	    			<p>Terribly Tiny Tales ("us", "we", or "our") operates the www.terriblytinytales.com website (the "Service"). This page informs you of our policies regarding the collection, use and disclosure of Personal Information when you use our Service.</p>
+	    		</div>
+	    	</div>
 
+
+		</div>
     	<table class="footer">
     		<tr>
     			<td width="30%" class="anim">
@@ -418,16 +357,18 @@
 			$(this).parent().toggleClass('open-menu');
 		});
 
+
+
+
+
+
 		$('#fullPage').fullpage({
 		    sectionSelector: '.vertical-scrolling',
 		    slideSelector: '.horizontal-scrolling',
 		    controlArrows: false, 
 		    scrollBar: true, 
 		    slidesNavigation: false,
-		    anchors: window.anchors,
-		    autoScrolling: false,
-		    fitToSection: false,
-		    sectionsColor: ['black', 'white', 'white', 'black', 'black'],
+		    autoScrolling: true,
 
 		    afterLoad: function(anchorLink, index) {
 		      window.lastSlideLoaded = index;
@@ -447,6 +388,9 @@
 		$.fn.fullpage.reBuild();
 		$.fn.fullpage.destroy();
 
+		$('.faq .question').click(function() {
+			$(this).siblings().slideToggle();
+		})
 });
 	</script>
 </html>
