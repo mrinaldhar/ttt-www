@@ -126,6 +126,15 @@
 		  column-count:         4;
 		  }
 		}
+		.sections {
+			width: 100%;
+			background-color: black;
+		}
+		#page-content {
+			padding: 0px;
+			position: absolute;
+			top: 70%;
+		}
 	</style>
 	<link rel="stylesheet" href="./css/media.css" />
 </head>
@@ -232,25 +241,23 @@
 
 
 
-    <div id="fullPage">
-	    <section class="vertical-scrolling">
+  <div id="fullPage" class="noplugin">
+    	<div class="sections main-section">
 		    <h1 class="sectionheader black-page">If words are your life, <br />make it your living.</h1>
-	    </section>
+	    </div>
 
-		<section class="vertical-scrolling">
+    	<div id="page-content">
+
+
 		    <h1 class="sectionheader sectionheader-left no-space">Work with the world's largest social storytelling platform.</h1>
 		    <span class="subpara no-space">Mail us your best work, resume and cover-letter to <a href="mailto:hello@terriblytinytales.com">hello@terriblytinytales.com</a>.</span>
-	    </section>
 
-	    <section class="vertical-scrolling fp-auto-height">
-	    	<section id="photos">
 			  <img src="./img/careers/1.jpeg" />
 			  <img src="./img/careers/2.jpeg" />
 			  <img src="./img/careers/3.jpeg" />
 			  <img src="./img/careers/4.jpeg" />
 			  <img src="./img/careers/5.jpeg" />
-			</section>
-    	<table class="footer">
+			  		<table class="footer">
     		<tr>
     			<td width="30%" class="anim">
     				<a href="us.html">Us</a>
@@ -280,7 +287,7 @@
     			</td>
     		</tr>
     	</table>
-    </section> 
+		</div>
 
 	</div>
 
@@ -328,13 +335,6 @@
 
 
 		$('#fullPage').fullpage({
-		    sectionSelector: '.vertical-scrolling',
-		    slideSelector: '.horizontal-scrolling',
-		    controlArrows: false, 
-		    scrollBar: true, 
-		    slidesNavigation: false,
-		    autoScrolling: true,
-		    sectionsColor: ['black', 'white', 'white'],
 
 		    afterLoad: function(anchorLink, index) {
 		      window.lastSlideLoaded = index;
@@ -352,6 +352,8 @@
 
 		});
 		$.fn.fullpage.reBuild();
+		$.fn.fullpage.destroy();
+
 });
 	</script>
 </html>

@@ -1,0 +1,565 @@
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="shortcut icon" href="./favico.jpg" type="image/x-icon">
+	<link rel="icon" href="./favico.jpg" type="image/x-icon">
+	<title>
+		terribly tiny tales | events
+	</title>
+	<link rel="stylesheet" href="./css/fullpage.css" />
+	<link rel="stylesheet" href="./css/base.css" />
+	<style>
+		.l-center {
+			text-align: center;
+			/*float: left;*/
+			position: absolute;
+			height: 70px;
+			width: 100%;
+			color: white;
+		}
+		#logo_header {
+			height: 70%;
+			margin-top: 15%;
+
+		}
+		.talebox {
+			width: 60%;
+			background-color: black;
+			margin: 0 auto;
+			color: white;
+			padding: 40px;
+			box-sizing: border-box;
+			margin-top: 80px;
+			margin-bottom: 30px;
+		}
+		.tb_title {
+			font-size: 6em;
+			display: block;
+			margin-bottom: 0px;
+			text-align: center;
+		}
+		.tb_subtitle {
+			font-size: 3em;
+			margin-top: -10px;
+			display: block;
+			text-align: center;
+		}
+		.sectionheader:not(.no-space) {
+		    margin-bottom: 100px;
+		}
+		.subpara:not(.no-space) {
+			margin-top: 100px;
+		}
+		.userform {
+			width: 80%;
+			margin: 0 auto;
+			text-align: center;
+			background-color: rgba(255,255,255,0.9);
+			padding-top: 20px;
+			padding-bottom: 20px;
+		}
+		input {
+			display: block;
+			width: 80%;
+			margin: 0 auto;
+			margin-top: 8px;
+			margin-bottom: 8px;
+			padding: 10px;
+			border: 0px;
+			text-align: center;
+			font-size: 2em;
+			outline-width: 0px;
+		}
+		input[type="submit"] {
+			background-color: black;
+			margin-top: 20px;
+			border: 0px;
+			color: white;
+		}
+		.sectionheader {
+			color: black;
+		}
+		.black-page.sectionheader {
+			color: white;
+		}
+		.black-page.subpara {
+			color: rgba(255,255,255,0.7);
+		}
+
+		.sectionimage {
+			margin-top: 0px;
+			padding-top: 0px;
+		}
+		section {
+			width: 100%;
+		}
+		.subpara {
+			text-align: center;
+		}
+		.sections {
+			width: 100%;
+			background-color: black;
+		}
+		#page-content {
+			padding: 0px;
+			position: absolute;
+			top: 70%;
+		}
+		.faq {
+			color: white;
+			width: 100%;
+			padding-left: 10%;
+			padding-right: 10%;
+			box-sizing: border-box;
+		}
+		.sections-white {
+			width: 100%;
+			box-sizing: border-box;
+			padding-left: 10%;
+			padding-right: 10%;
+		}
+	</style>
+	<link rel="stylesheet" href="./css/media.css" />
+</head>
+
+<body>
+
+	<header>
+      <div class="header-top clearfix">
+        <h4 class="l-left"><a href="index.html"><img src="./img/logo_monogram.jpg" id="logo_header"></a></h4>
+        <h4 class="l-center">events</h4>
+        <a class="l-right toggle-menu mobile_nav" href="#">
+          <i></i>
+          <i></i>
+          <i></i>
+        </a>
+        <ul class="l-right desktop_nav" id="desktop_menu">
+			<li class="anim">
+        		collaborate
+        	</li>
+        	<li class="anim">
+        		events
+        	</li>
+        	<li class="anim">
+        		stttore
+        	</li>
+        	<li class="anim">
+        		connect
+        	</li>
+        	<li class="anim">
+        		submit
+        	</li>
+        </ul>
+      </div>
+
+      <nav class="hide" style="background-color: black;">
+        <ul id="menu">
+        	<a href="collaborate.html">
+        		<li class="anim">
+        		<i>collaborate</i>
+	        	</li>
+	        </a>
+        	<a href="events.html">
+	        	<li class="anim">
+	        		events
+	        	</li>
+	        </a>
+        	<a href="stttore.html">
+	        	<li class="anim">
+	        		stttore
+	        	</li>
+	        </a>
+        	<a href="us.html">
+	        	<li class="anim">
+	        		us
+	        	</li>
+	        </a>
+        	<a href="submit.html">
+	        	<li class="anim bottom-rule">
+	        		submit
+	        	</li>
+	        </a>
+        	<a href="tos.html">
+	        	<li class="anim">
+	        		t&amp;c
+	        	</li>
+	        </a>
+        	<a href="faqs.html">
+	        	<li class="anim">
+	        		faqs
+	        	</li>
+	        </a>
+        	<a href="privacy.html">
+	        	<li class="anim bottom-rule">
+	        		policy
+	        	</li>
+	        </a>
+	        
+        	<li class="anim no-hover">
+        		<table class="social_list_menu" width="100%">
+		        	<tr>
+		        		<td width="20%">
+				        	<img class="social_logo_menu" src="./img/social/facebook-white.png" />
+				        </td>
+				        <td width="20%">
+				        	<img class="social_logo_menu" src="./img/social/instagram-white.png" />
+				        </td>
+				        <td width="20%">
+				        	<img class="social_logo_menu" src="./img/social/twitter-white.png" />
+				        </td>
+				        <td width="20%">
+							<img class="social_logo_menu" src="./img/social/youtube-white.png" />
+				        </td>
+				        <td width="20%">
+				        	<img class="social_logo_menu" src="./img/social/stttore-white.png" />
+				        </td>
+				    </tr>
+				</table>
+        	</li>
+
+		</ul>
+      </nav>
+    </header>
+
+
+
+
+    <div id="fullPage" class="noplugin">
+    	<div class="sections main-section">
+			    <h1 class="sectionheader black-page">talking, writing, and more</h1>
+			</div>
+
+    	<div id="page-content">
+
+    		
+			    <h1 class="sectionheader no-space">Terribly Tiny Tutorials</h1>
+				<!-- <img src="./img/collaborate/storify.gif" class="sectionimage" /> -->
+			    <span class="subpara no-space">Intimate and interactive workshops on how to write tales, about the hows and wheres and whys of TTT. We delve into the exclusive world of micro fiction. We discuss the role of attention spans, and impactful content. More importantly, we share stories, and write together.</span>
+
+	    	<div class="sections">
+			    <h1 class="sectionheader black-page no-space">What's in it?</h1>
+			    <div class="faq">
+		    		<div class="question">
+		    			<h2><img src="./img/down.png" class="down_arrow" />The tale behind ttt</h2>
+		    		</div>
+		    		<div class="answer">
+		    			<p>
+		    				You've seen them write. Now, hear them talk. Interact with a stellar bunch of seasoned ttt writers, and even the founders of Terribly Tiny Tales - as they take you through their journey and writing process.
+		    			</p>
+		    		</div>
+		    	</div>
+
+		    	<div class="faq">
+		    		<div class="question">
+		    			<h2><img src="./img/down.png" class="down_arrow" />Less is more</h2>
+		    		</div>
+		    		<div class="answer">
+		    			<p>
+		    				Learn the art of brevity, creating meaningful content, expressing yourself, and telling your own story.
+		    			</p>
+		    		</div>
+		    	</div>
+
+		    	<div class="faq">
+		    		<div class="question">
+		    			<h2><img src="./img/down.png" class="down_arrow" />Write-minded people</h2>
+		    		</div>
+		    		<div class="answer">
+		    			<p>Meet, connect, and join a community who shares your love for stories. That’s how we grew.
+							<br />And that’s how you will, too.</p>
+		    		</div>
+		    	</div>
+
+		    	<div class="faq">
+		    		<div class="question">
+		    			<h2><img src="./img/down.png" class="down_arrow" />Write, rinse, repeat</h2>
+		    		</div>
+		    		<div class="answer">
+		    			<p>Learn the golden rules of writing.
+						Pick up tips and tricks (tricks of the trade?) from the speakers. And finally, craft your own tales.</p>
+		    		</div>
+		    	</div>
+
+		    	<div class="faq">
+		    		<div class="question">
+		    			<h2><img src="./img/down.png" class="down_arrow" />Get featured</h2>
+		    		</div>
+		    		<div class="answer">
+		    			<p>The best tales received will be featured on the page, and make your words reach millions of people.</p>
+		    		</div>
+		    	</div>
+
+		    	<div class="faq">
+		    		<div class="question">
+		    			<h2><img src="./img/down.png" class="down_arrow" />Add it to your CV</h2>
+		    		</div>
+		    		<div class="answer">
+		    			<p>Get an official TTT certificate for the workshop you attend, and add it to your resume</p>
+		    		</div>
+		    	</div>
+
+		    	<div class="faq">
+		    		<div class="question">
+		    			<h2><img src="./img/down.png" class="down_arrow" />Work with us</h2>
+		    		</div>
+		    		<div class="answer">
+		    			<p>Stand a chance to come work with us - office internships, or working remotely.</p>
+		    		</div>
+		    	</div>
+
+		    	<div class="faq">
+		    		<div class="question">
+		    			<h2><img src="./img/down.png" class="down_arrow" />Let's discuss?</h2>
+		    		</div>
+		    		<div class="answer">
+		    			<p>Engage in open discussions and Q&amp;A sessions with us, no holds barred.</p>
+		    		</div>
+		    	</div>
+
+		    	<div class="faq">
+		    		<div class="question">
+		    			<h2><img src="./img/down.png" class="down_arrow" />Take us home</h2>
+		    		</div>
+		    		<div class="answer">
+		    			<p>Have an exclusive access to discounted ttt merchandise, only for you (and your friends).</p>
+		    		</div>
+		    	</div>
+
+		    	<div class="faq">
+		    		<div class="question">
+		    			<h2><img src="./img/down.png" class="down_arrow" />Tailor the event</h2>
+		    		</div>
+		    		<div class="answer">
+		    			<p>Subject to the number of participants, the nature of discussion, and tons of other factors, we host highly-customisable models of our event.</p>
+		    		</div>
+		    	</div>
+
+		    	<div class="faq">
+		    		<div class="question">
+		    			<h2><img src="./img/down.png" class="down_arrow" />Let's discuss?</h2>
+		    		</div>
+		    		<div class="answer">
+		    			<p>Engage in open discussions and Q&amp;A sessions with us, no holds barred.</p>
+		    		</div>
+		    	</div>
+			</div>
+			<div class="sections-white">
+			<h1>Types of Events</h1>
+
+			<h2>Workshop - Introduction &amp; Tale Writing</h2>
+
+			<p>The journey of TTT, the structure and the nuances of writing, and a tale writing session.
+			Our flagship and most popular workshop,
+			where everyone returns richer in stories.
+			<br /><br />Capacity: 50 - 100 <br />Duration: 2 hours <br />Recommended: Everyone.
+			</p>
+
+			<h2>Workshop - Advanced Writing</h2>
+			
+			<p>A cozier session. Writing everything short, everything TTT at length.
+			An in-depth discussion on the future of
+			social storytelling, what works in writing, and why. Sessions of writing tales, #Glimpses, and
+			other experimental forms, with us.
+			<br /><br />Capacity: 20 - 40
+			<br />Duration: 3 - 4 hours
+			<br />Recommended: Literature and media students, and anyone else stoked about stories.</p>
+			
+			<h2>Workshop - Collaborations &amp; Branded Content</h2>
+
+			<p>Collaboration the next big thing.
+			Why do brands that sell, buy stories?
+			Talks on the changing faces of brand visibility, and how wiser brands co-own realms
+			of stories with us.
+			<br />What's in it for everyone involved in the process?
+			Writing session for branded tales.
+			<br /><br />Capacity: 50 - 100
+			<br />Duration: 2 hours
+			<br />Recommended: Communication students, corporate and media professionals.</p>
+			
+			<h2>Workshop - Day-long Activities</h2>
+
+			<p>Talks, tales, talkies.
+			A bunch of everything micro-fiction, all day.
+			The longest chain of Events. Discussions, talks, writing sessions, short film screening - attendees are at liberty to choose whichever segment they wish to attend.
+			<br /><br />Capacity: 100 - 200 <br />Duration: 5 - 8 hours <br />Recommended: Everyone.</p>
+			
+			<h2>Talks - Founders</h2>
+
+			<p>Inspiring sessions by the founders -
+			chronicling the journey of ttt, the growing
+			world of microfiction, and how you can be a part. Or better still, start your own journey.
+			<br /><br />Duration: 10 - 30 minutes <br />Recommended: Everyone.</p>
+			</div>
+		 
+		 	<h2>Some of our favorite workshop tales</h2>
+
+	        <div id="timer"></div>
+
+
+	    	<div class="sections">
+			    <h1 class="sectionheader black-page no-space">We were here</h1>
+			    <table class="brands_list" width="70%">
+				    <tr>
+				        <td width="33%">
+							<img class="brand_logo" src="./img/brand_logos/asianpaints.png" />
+				        </td>
+				        <td width="33%">
+				        	<img class="brand_logo" src="./img/brand_logos/vodafone.png" />
+				        </td>
+				        <td width="33%">
+				        	<img class="brand_logo" src="./img/brand_logos/schartered.png" />
+				        </td>
+				    </tr>
+				</table>
+			</div>
+
+	    	<div class="sections" style="margin-bottom: 0px;">
+			    <h2 class="sectionheader no-space black-page">Want us to tell your story?
+			    	<br /><br />If you'd like us there, we'd love to be there.</h2>
+		    	<div class="faq">
+		    		<div class="question">
+		    			<h2><img src="./img/down.png" class="down_arrow" />Invite us to your campus</h2>
+		    		</div>
+		    		<div class="answer">
+		    			<p></p>
+		    		</div>
+		    	</div>
+		    	<div class="faq">
+		    		<div class="question">
+		    			<h2><img src="./img/down.png" class="down_arrow" />Request a workshop</h2>
+		    		</div>
+		    		<div class="answer">
+		    			<p></p>
+		    		</div>
+		    	</div>
+			    <form class="userform">
+			    	<input type="text" placeholder="full name" />
+			    	<input type="text" placeholder="organisation" />
+			    	<input type="text" placeholder="email" />
+			    	<input type="text" placeholder="phone" />
+			    	<input type="text" placeholder="your message" />
+			    	<input type="submit" value="submit" />
+			    </form>
+			</div>
+			<table class="footer">
+	    		<tr>
+	    			<td width="30%" class="anim">
+	    				<a href="us.html">Us</a>
+	    			</td>
+	    			<td width="33%" class="anim">
+	    				<a href="faqs.html">FAQ</a>
+	    			</td>
+	    			<td width="33%" rowspan="3" class="anim">
+	    				<span style="font-size: 4em; font-family: neue;">ttt</span>
+	    				<br /><a href="mediakit.html">Download</a>
+	    			</td>
+	    		</tr>
+	    		<tr>
+	    			<td width="33%" class="anim">
+	    				<a href="privacy.html">Privacy</a>
+	    			</td>
+	    			<td width="33%" class="anim">
+	    				Blog
+	    			</td>
+	    		</tr>
+	    		<tr>
+	    			<td width="33%" class="anim">
+	    				<a href="tos.html">Terms of Service</a>
+	    			</td>	
+	    			<td width="33%" class="anim">
+	    				<a href="press.html">Press</a>
+	    			</td>
+	    		</tr>
+	    	</table>
+	</div>
+			
+	</div>
+
+
+</body>
+<script src="./js/jquery.js"></script>
+<script src="./js/fullpage.js"></script>
+<script src="./js/progressbar.js"></script>
+<script>
+	$(document).ready(function() {
+		var windowWidth = $(document).width();
+
+		if (windowWidth < 767) {
+			$('.brand_logos').css("width", "100%");
+			$('.brands_list').css("width", "80%");
+		}
+
+		var $header_top = $('.header-top');
+		var $nav = $('nav');
+
+  		$nav.click(function() {
+		    $header_top.toggleClass('open-menu');
+  		});
+
+  		$('#menu').click(function(e) {
+  			e.stopPropagation();
+  		});
+
+
+		$('#leftarrow').click(function() {
+			$.fn.fullpage.moveSlideLeft();
+		});
+
+		$('#rightarrow').click(function() {
+			$.fn.fullpage.moveSlideRight();
+		});
+
+
+		$header_top.find('a').on('click', function() {
+			$(this).parent().toggleClass('open-menu');
+		});
+
+
+
+
+
+		$('#fullPage').fullpage({
+		    controlArrows: false, 
+		    autoScrolling: true,
+
+		    afterLoad: function(anchorLink, index) {
+		      window.lastSlideLoaded = index;
+		      $header_top.css('background', 'rgba(0,0,0, 1)');
+		      $nav.css('background', 'rgba(0,0,0,0.9)');
+		      	$header_top.fadeIn();
+		    },
+
+		    onLeave: function(index, nextIndex, direction) {
+		    },
+
+		    afterSlideLoad: function( anchorLink, index, slideAnchor, slideIndex){
+	            var loadedSlide = $(this);
+	        }
+
+		});
+		$.fn.fullpage.reBuild();
+		$.fn.fullpage.destroy();
+		$('.faq .question').click(function() {
+			$(this).siblings().slideToggle();
+		});
+		var bar = new ProgressBar.Line('#timer', {
+		  strokeWidth: 1,
+		  easing: 'linear',
+		  duration: 7000,
+		  color: '#000000',
+		  trailColor: '#aaa',
+		  trailWidth: 1,
+		  svgStyle: {width: '100%', height: '100%'}
+		});
+		beginTimer(bar);
+
+		function beginTimer(bar) {
+			bar.set(0.0);
+			bar.animate(1.0, function() {
+				console.log(index);
+				beginTimer(bar, index);
+			}); 
+		}
+});
+	</script>
+</html>

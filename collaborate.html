@@ -36,11 +36,13 @@
 			font-size: 6em;
 			display: block;
 			margin-bottom: 0px;
+			text-align: center;
 		}
 		.tb_subtitle {
 			font-size: 3em;
 			margin-top: -10px;
 			display: block;
+			text-align: center;
 		}
 		.sectionheader:not(.no-space) {
 		    margin-bottom: 100px;
@@ -91,6 +93,19 @@
 		section {
 			width: 100%;
 		}
+		.subpara {
+			text-align: center;
+		}
+		.sections {
+			width: 100%;
+			background-color: black;
+		}
+		#page-content {
+			padding: 0px;
+			position: absolute;
+			top: 70%;
+		}
+
 	</style>
 	<link rel="stylesheet" href="./css/media.css" />
 </head>
@@ -198,32 +213,45 @@
 
 
     <div id="fullPage" class="noplugin">
+    	<div class="sections main-section">
+			    <h1 class="sectionheader black-page">let's tell it together</h1>
+			</div>
+
     	<div id="page-content">
 
-			    <h1 class="sectionheader black-page">let's tell it together</h1>
-
-			    <h1 class="sectionheader">Storify your brand</h1>
+    		
+			    <h1 class="sectionheader no-space">Storify your brand</h1>
+				<img src="./img/collaborate/storify.gif" class="sectionimage" />
 			    <span class="subpara no-space">We bring life to the stories you want to tell. <br />With us, give your brand a voice.</span>
 
-			    <h1 class="sectionheader black-page">Collaboration is the new creation</h1>
-			    <span class="subpara black-page">We bring life to the stories you want to tell. <br />With us, give your brand a voice.</span>
+	    	<div class="sections">
+			    <h1 class="sectionheader black-page no-space">Collaboration is the new creation</h1>
+				<img src="./img/collaborate/collabisthenewcreation.gif" class="sectionimage" />
+			    <span class="subpara black-page no-space">We bring life to the stories you want to tell. <br />With us, give your brand a voice.</span>
+			</div>
 
-			    <h1 class="sectionheader">Content that celebrates</h1>
-			    <span class="subpara">Or, tailored around you <br />
+			    <h1 class="sectionheader no-space">Content that celebrates</h1>
+				<img src="./img/collaborate/contentthatcelebrates.gif" class="sectionimage" />
+			    <span class="subpara no-space">Or, tailored around you <br />
 						Alternatively, our tales can mould themselves around on-going ad campaigns, extending your reach.</span>
 		 
-		 	    <h1 class="sectionheader black-page">Or, tailored around you</h1>
-			    <span class="subpara black-page">We bring life to the stories you want to tell. <br />With us, give your brand a voice.</span>
+	    	<div class="sections">
+		 	    <h1 class="sectionheader black-page no-space">Or, tailored around you</h1>
+				<img src="./img/collaborate/tailoredaroundyou.gif" class="sectionimage" />
+			    <span class="subpara black-page no-space">We bring life to the stories you want to tell. <br />With us, give your brand a voice.</span>
+			</div>
 	
-			    <h1 class="sectionheader">Let the people you want to reach, reach you</h1>
+			    <h1 class="sectionheader no-space">Let the people you want to reach, reach you</h1>
 				<img src="./img/collaborate/likes.gif" class="sectionimage" />
-			    <span class="subpara">For long-term collaborations, we engage our vibrant community of the world's finest writers, crowdsourcing your stories.</span>
+			    <span class="subpara no-space">For long-term collaborations, we engage our vibrant community of the world's finest writers, crowdsourcing your stories.</span>
 
 
-
-			    <h1 class="sectionheader black-page">Or, leave it to us</h1>
-			    <span class="subpara black-page">You could also entrust our hand-picked team of stellar writers from within our community to tell your stories.
+	    	<div class="sections">
+			    <h1 class="sectionheader black-page no-space">Or, leave it to us</h1>
+				<img src="./img/collaborate/leaveittous.gif" class="sectionimage" />
+			    <span class="subpara black-page no-space">You could also entrust our hand-picked team of stellar writers from within our community to tell your stories.
 				</span>
+			</div>
 
 
 			    <h1 class="sectionheader no-space">Who are we telling your story to?</h1>
@@ -244,7 +272,8 @@
 			    </div>
 			    <span class="subpara no-space">new fans, every week</span>
 
-			    <h1 class="sectionheader black-page">See how some of our global brand partners tell their stories with us.</h1>
+	    	<div class="sections">
+			    <h1 class="sectionheader black-page no-space">See how some of our global brand partners tell their stories with us.</h1>
 			    <table class="brands_list" width="70%">
 				    <tr>
 				        <td width="33%">
@@ -258,10 +287,12 @@
 				        </td>
 				    </tr>
 				</table>
+			</div>
 
-			    <h1 class="sectionheader">See how some of our global brand partners tell their stories with us.</h1>
-			    <span class="subpara">For long-term collaborations, we engage our vibrant community of the world's finest writers, crowdsourcing your stories.</span>
+			    <h1 class="sectionheader no-space">See how some of our global brand partners tell their stories with us.</h1>
+			    <span class="subpara no-space">For long-term collaborations, we engage our vibrant community of the world's finest writers, crowdsourcing your stories.</span>
 
+	    	<div class="sections" style="margin-bottom: 0px;">
 			    <h1 class="sectionheader no-space black-page">Want us to tell your story?</h1>
 			    <form class="userform">
 			    	<input type="text" placeholder="full name" />
@@ -271,8 +302,7 @@
 			    	<input type="text" placeholder="your message" />
 			    	<input type="submit" value="submit" />
 			    </form>
-
-	</div>
+			</div>
 			<table class="footer">
 	    		<tr>
 	    			<td width="30%" class="anim">
@@ -303,6 +333,8 @@
 	    			</td>
 	    		</tr>
 	    	</table>
+	</div>
+			
 	</div>
 
 
