@@ -118,6 +118,24 @@
 			padding-left: 10%;
 			padding-right: 10%;
 		}
+		#photos {
+			padding-left: 10%;
+			padding-right: 10%;
+			box-sizing: border-box;
+		}
+		.sectionheader-left {
+			text-align: left;
+			margin: 0 auto;
+			width: 85%;
+		}
+		#photos_slideshow {
+			width: 80%;
+			padding-left: 10%;
+			padding-right: 10%;
+		}
+		.sections-white {
+			background-color: white;
+		}
 	</style>
 	<link rel="stylesheet" href="./css/media.css" />
 </head>
@@ -234,6 +252,15 @@
     		
 			    <h1 class="sectionheader no-space">Terribly Tiny Tutorials</h1>
 				<!-- <img src="./img/collaborate/storify.gif" class="sectionimage" /> -->
+				<section id="photos">
+				  <img src="./img/careers/4.jpeg" />
+				  <img src="./img/careers/5.jpeg" />
+				  <img src="./img/careers/3.jpeg" />
+				  <img src="./img/careers/1.jpeg" />
+				  <img src="./img/careers/2.jpeg" />
+				</section>
+				<br /><br /><br />
+
 			    <span class="subpara no-space">Intimate and interactive workshops on how to write tales, about the hows and wheres and whys of TTT. We delve into the exclusive world of micro fiction. We discuss the role of attention spans, and impactful content. More importantly, we share stories, and write together.</span>
 
 	    	<div class="sections">
@@ -391,10 +418,11 @@
 			<br /><br />Duration: 10 - 30 minutes <br />Recommended: Everyone.</p>
 			</div>
 		 
-		 	<h2>Some of our favorite workshop tales</h2>
-
+		 	<h2 class="sectionheader sectionheader-left">Some of our favorite workshop tales</h2>
+		 	<img id="photos_slideshow" src="./img/tales/1.png" />
 	        <div id="timer"></div>
 
+	        <br /><br />
 
 	    	<div class="sections">
 			    <h1 class="sectionheader black-page no-space">We were here</h1>
@@ -413,6 +441,13 @@
 				</table>
 			</div>
 
+	    	<div class="sections sections-white" style="margin-bottom: 0px;">
+				<h2>Here's what attendees had to say</h2>
+				<br /><br /><br /><br />
+				<p>"The collab with TTT was great in terms of numbers and FB engagement on the thorny issue of reporting sexual violence. "</p>
+
+				<p><b>-Kumail Changezi</b><br /><i>White owl brewery</i></p>
+			</div>
 	    	<div class="sections" style="margin-bottom: 0px;">
 			    <h2 class="sectionheader no-space black-page">Want us to tell your story?
 			    	<br /><br />If you'd like us there, we'd love to be there.</h2>
@@ -481,7 +516,10 @@
 <script src="./js/fullpage.js"></script>
 <script src="./js/progressbar.js"></script>
 <script>
+	var currentSlideshowIndex = -1;
+	var slideshowImages = ["1.png", "2.png", "3.png", "4.png", "5.png"];
 	$(document).ready(function() {
+		slideshow();
 		var windowWidth = $(document).width();
 
 		if (windowWidth < 767) {
@@ -556,9 +594,16 @@
 		function beginTimer(bar) {
 			bar.set(0.0);
 			bar.animate(1.0, function() {
-				console.log(index);
-				beginTimer(bar, index);
+				slideshow();
+				console.log("hi");
+				beginTimer(bar);
 			}); 
+		}
+		function slideshow() {
+			currentSlideshowIndex = (currentSlideshowIndex + 1)%5;
+			$('#photos_slideshow').fadeOut(function() {
+				$('#photos_slideshow').attr("src", "./img/tales/"+slideshowImages[currentSlideshowIndex]);				
+			}).fadeIn();
 		}
 });
 	</script>

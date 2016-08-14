@@ -268,6 +268,32 @@ h4 a {
 	float: right;
 }
 
+#page-content .sectionheader {
+	font-size: 3.2em;
+}
+#page-content .subpara {
+	font-size: 1.7em;
+}
+
+#photos {
+  /* Prevent vertical gaps */
+  line-height: 0;
+   
+  -webkit-column-count: 2;
+  -webkit-column-gap:   0px;
+  -moz-column-count:    2;
+  -moz-column-gap:      0px;
+  column-count:         2;
+  column-gap:           0px;  
+}
+
+#photos img {
+  /* Just in case there are inline attributes */
+  width: 100% !important;
+  height: auto !important;
+}
+
+
 /* NAVIGATION AND MENU
    –––––––––––––––––––––––––––––––––––––––––––––––––– */
 
@@ -368,7 +394,6 @@ h4 a {
 	color: black;
 	box-shadow: 0 0 10px black;
 }
-
 
 nav {
 	height: 0;
