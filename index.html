@@ -1,154 +1,20 @@
 <html>
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-
+	<link rel="shortcut icon" href="./favico.jpg" type="image/x-icon">
+	<link rel="icon" href="./favico.jpg" type="image/x-icon">
 	<title>
 		terribly tiny tales
 	</title>
 	<link rel="stylesheet" href="./css/fullpage.css" />
+	<!-- <link rel="stylesheet" href="./css/animation.css" /> -->
+	<link rel="stylesheet" href="./css/base.css" />
 	<style>
 
-/* HELPER CLASSES
-–––––––––––––––––––––––––––––––––––––––––––––––––– */
 
-
-@font-face {
-  font-family: "untitled-font-1";
-  src:url("./fonts/untitled-font-1.eot");
-  src:url("./fonts/untitled-font-1.eot?#iefix") format("embedded-opentype"),
-    url("./fonts/untitled-font-1.woff") format("woff"),
-    url("./fonts/untitled-font-1.ttf") format("truetype"),
-    url("./fonts/untitled-font-1.svg#untitled-font-1") format("svg");
-  font-weight: normal;
-  font-style: normal;
-}
-
-[class^="icon-"]:after,
-[class*=" icon-"]:after {
-  font-family: "untitled-font-1";
-  font-style: normal;
-  font-weight: normal;
-  font-variant: normal;
-  text-transform: none;
-  speak: none;
-  line-height: 1;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-.icon-up-open-big:after {
-  content: "a";
-  margin-top: 30px;
-  margin-bottom: 10px;
-  font-size: 1em;
-  display: block;
-  -webkit-transform: rotateX(180deg);
-          transform: rotateX(180deg);
-  color: black;
-  -webkit-transition: color .3s;
-          transition: color .3s;
-}
-
-.icon-up-open-big:hover:after {
-	color: white;	
-}
-
-.scroll-icon {
-	position: absolute;
- 	left: 50%;
-  bottom: 30px;
-  padding: 0 10px;
-  	-webkit-transform: translateX(-50%);
-  	    -ms-transform: translateX(-50%);
-  	        transform: translateX(-50%);
-}
-
-
-
-.clearfix:before,
-.clearfix:after {
-  content: "";
-  display: table;
-}
-
-.clearfix:after {
-  clear: both;
-}
-
-.l-left {
-	float: left;
-}
-
-.l-right {
-	float: right;
-}
-
-.end {
-	margin-top: 30px;
-	font-size: 3em;
-	font-weight: bold;
-	opacity: 0;
-	-webkit-transform: translateY(300px);
-	    -ms-transform: translateY(300px);
-	        transform: translateY(300px);
-	-webkit-transition: opacity, -webkit-transform 1s;
-	        transition: opacity, transform 1s;
-	-webkit-transition-delay: 1s;
-	        transition-delay: 1s;
-}
-
-
-/* RESET-GENERAL STYLES
-–––––––––––––––––––––––––––––––––––––––––––––––––– */
-
-* {
-	margin: 0;
-	padding: 0;
-}
-
-html {
-	font-size: 62.5%;
-}
-
-body {
-	color: black;
-	/*letter-spacing: .18em;*/
-}
-
-a {
-	text-decoration: none;
-	color: white;
-}
-
-ul, li {
-	list-style-type: none;
-}
-
-
-		@font-face {
-			src: url("./fonts/helvetica-ul.ttf");
-			font-family: neue;
-		}
-		@font-face {
-			src: url("./fonts/helvetica-l.ttf");
-			font-family: neue-l;
-		}
-
-
-
-
-
-		body, html {
-			font-family: neue;
-			-webkit-font-smoothing: antialiased;
-			  -moz-osx-font-smoothing: grayscale;
-		}
-		h1, h2, h3, h4 {
-			font-weight: normal;
-		}
 		#logo_hero {
-			font-size: 7em;
-			width: 100%;
+			font-size: 8em;
+			width: 50%;
 			text-align: center;
 		}
 		#subtitle {
@@ -160,52 +26,17 @@ ul, li {
 			width: 100%;
 			background-color: rgba(255,255,255,1);
 			color: black;
-			max-height: 10%;
-			padding-top: 30px;
-			padding-bottom: 30px;
+			max-height: 20%;
+			padding-top: 40px;
+			padding-bottom: 40px;
 			font-family: neue-l;
 		}
-		small {
-			font-size: 0.3em;
-		}
-		section {
-			text-align: center;
-		}
 		#section1 {
-			background-color: rgba(0,0,0,0.9);
+			background-color: rgba(0,0,0,1);
 			color: white;
 		}
 		
-		.horizontal-scrolling {
-			display: inline-block;
-			max-height: 50vh;
-		}
-		.footer {
-			position: absolute;
-			bottom: 0px;
-			left: 0px;
-			width: 100%;
-			font-size: 1.5em;
-			font-family: neue-l;
-			background-color: rgba(0,0,0,0.9);
-			color: white;
-			/*padding-bottom: 20px;*/
-
-		}
-		.footer tr td {
-			text-align: center;
-			padding-top: 20px;
-			padding-bottom: 20px;
-			cursor: pointer;
-		}
-		.footer tr td:hover {
-			background-color: rgba(255,255,255,1);
-			color: black;
-			border-radius: 100px;
-		}
-		h1 {
-			font-size: 5em;
-		}
+		
 		.social {
 			padding-bottom: 100px;
 			margin-top: 50px;
@@ -219,284 +50,167 @@ ul, li {
 			font-size: 1.4em;
 			font-family: neue-l;
 		}
-		.anim {
-		  -o-transition:.5s;
-		  -ms-transition:.5s;
-		  -moz-transition:.5s;
-		  -webkit-transition:.5s;
-		  transition:.5s;
-		}
 		
-.header-top {
-	background: rgba(0,0,0,0.9);
-	height: 70px;
-	padding: 0 10px;
-	position: fixed;
-	color: black;
-	top: 0;
-	width: 100%;
-	display: none;
-	font-family: neue-l;
-	z-index: 12;
-	box-sizing: border-box;
-}
+		
 
-h4 {
-	line-height: 70px;
-	height: 70px;
-	font-size: 2.5em;
-}
-
-h4 a {
-	display: block;
-	padding: 0 10px;
-}
-
-.toggle-menu {
-	width: 50px;
-	height: 50px;
-	display: inline-block;
-	position: relative;
-	top: 10px;
-}
-
-.toggle-menu i {
-	position: absolute;
-	display: block;
-	height: 2px;
-	background: white;
-	width: 30px;
-	left: 10px;
-	-webkit-transition: all .3s;
-	        transition: all .3s;
-}
-
-.toggle-menu i:nth-child(1) {
-	top: 16px;
-}
-
-.toggle-menu i:nth-child(2) {
-	top: 24px;
-}
-
-.toggle-menu i:nth-child(3) {
-	top: 32px;
-}
-
-.open-menu i:nth-child(1) {
-	top: 25px;
-	-webkit-transform: rotateZ(45deg);
-	        transform: rotateZ(45deg);
-}
-
-.open-menu i:nth-child(2) {
-	background: transparent;
-}
-
-.open-menu i:nth-child(3) {
-	top: 25px;
-	-webkit-transform: rotateZ(-45deg);
-	        transform: rotateZ(-45deg);
-}
-
-nav {
- 	height: 0;
-	opacity: 0;
-  box-sizing: border-box;
-	background: rgba(0,0,0,0.8);
-	position: fixed;
-	top: 70px;
-	width: 100%;
-  -webkit-transition: all 0.5s;
-          transition: all 0.5s;
-}
-
-.open-menu ~ nav {
-	opacity: 1;
- 	padding: 80px 0;
-	z-index: 15;
-	height: calc(90vh - 70px);
-}
-
-nav ul {
-	padding: 0 10px;
-	display: -webkit-box;
-	display: -webkit-flex;
-	display: -ms-flexbox;
-	display: flex;
-}
-
-nav li {
-	-webkit-box-flex: 1;
-	-webkit-flex: 1;
-	    -ms-flex: 1;
-	        flex: 1;
-}
-
-nav li a {
-	font-size: 2em;
-	display: block;
-	padding: 30px;
-	text-align: center;
-	-webkit-transition: background .3s;
-	        transition: background .3s;
-}
-
-nav li:nth-child(odd) a,
-body.fp-viewing-fifthSection-1 #menu li:nth-child(5) a {
-	background: #962D3E;
-}
-
-nav li:nth-child(even) a {
-	background: #aa3346;
-}
-
-nav li:nth-child(odd) a:hover {
-	background: #9e2f41;
-}
-
-nav li:nth-child(even) a:hover {
-	background: #c53c52;
-}
-
-nav li.active a,
-body.fp-viewing-fifthSection-1 #menu li:last-child a {
-  background: #453659;
-}
-
-
-
-
-
-
-@media screen and (max-width: 767px) {
-	nav ul {
-		-webkit-box-orient: vertical;
-		-webkit-box-direction: normal;
-		-webkit-flex-direction: column;
-		    -ms-flex-direction: column;
-		        flex-direction: column;
-	}
-
-	nav li {
-		margin-top: 1px;
-	}
-  
-  nav li a {
-    font-size: 1.5em;
-  }
-  
-  .scroll-icon {
-    display: none;
-  }
-}
-
-@media screen and (max-width: 400px) {
-  html {
-    font-size: 50%;
-  }
-  
-  .open-menu ~ nav {
-		padding: 20px 0;
-	}
-
-	nav li a {
-		padding: 3px;
-	}
-}
-
-.subpara {
-	font-size: 2em;
-	color: rgba(0,0,0,0.5);
-	font-family: neue-l;
-	margin-top: 40px;
-	display: block;
-	width: 100%;
-	padding-left: 20%;
-	padding-right: 20%;
-	box-sizing: border-box;
-}
-.sectionheader {
-	display: block;
-	width: 100%;
-	padding-left: 20px;
-	padding-right: 20px;
-	box-sizing: border-box;
-}
 .tale_slide {
 			/*width: vw;*/
 			/*max-width: 100vw;*/
 			max-height:80vh;
-			max-width: 100vw;
+			max-width: 90vw;
 			/*height: 100%;*/
 		}
 		#section2 {
-			background-color: rgba(0,0,0,1);
+			/*background-color: rgba(0,0,0,1);*/
 		}
 
 
 
-#fp-nav ul li a span, 
-.fp-slidesNav ul li a span {
-	background: rgb(255,255,255); 
+
+
+.brands {
+	width: 100vw;
+}
+.slide_title {
+	margin-bottom: 60px;
+}
+#section_brands {
+	background-color: rgba(0,0,0,1);
+	color: white;
 }
 
+
+.social_list {
+	width: 80vw;
+	position: relative;
+	margin: 0 auto;
+}
+.social_list tr td img {
+	width: auto;
+	max-height: 4vh;
+}
+.social_list tr td {
+	text-align: center;
+	padding: 30px;
+	width: 20%;
+	cursor: pointer;
+}
+ #logo_header {
+    height: 90%;
+  }
+
+
 	</style>
+	<link rel="stylesheet" href="./css/media.css" />
+
 </head>
 <body>
 <header>
       <div class="header-top clearfix">
-        <h4 class="l-left"><a href="#firstSection">terribly tiny tales<sup><small>TM</small></sup></a></h4>
-        <a class="l-right toggle-menu" href="#">
+        <h4 class="l-left"><a href="index.html"><img src="./img/logo_hero.jpg" id="logo_header"></a></h4>
+        <a class="l-right toggle-menu mobile_nav" href="#">
           <i></i>
           <i></i>
           <i></i>
         </a>
+        <ul class="l-right desktop_nav" id="desktop_menu">
+			<a href="collaborate.html">
+				<li class="anim">
+	        		collaborate
+	        	</li>
+	        </a>
+        	<li class="anim">
+        		events
+        	</li>
+        	<li class="anim">
+        		stttore
+        	</li>
+        	<li class="anim">
+        		connect
+        	</li>
+        	<li class="anim">
+        		submit
+        	</li>
+        </ul>
       </div>
 
-      <nav class="hide">
+      <nav class="hide" style="background-color: black;">
         <ul id="menu">
-          <li data-menuanchor="firstSection">
-            <a href="#firstSection" title="First Section">First Section</a>
-          </li>
-          <li data-menuanchor="secondSection">
-            <a href="#secondSection" title="Second Section">Second Section</a>
-          </li>
-          <li data-menuanchor="thirdSection">
-            <a href="#thirdSection" title="Second Section">Third Section</a>
-          </li>
-          <li data-menuanchor="fourthSection">
-            <a href="#fourthSection" title="Fourth Section">Fourth Section</a>
-          </li>
-          <li data-menuanchor="fifthSection">
-            <a href="#fifthSection" title="Fourth Section">Fourth Section</a>
-          </li>
-          <li data-menuanchor="sixthSection">
-            <a href="#sixthSection" title="Fourth Section">Fourth Section</a>
-          </li>
-          <!-- <li data-menuanchor="seventhSection">
-            <a href="#seventhSection" title="Fourth Section">Fourth Section</a>
-          </li>
-          <li data-menuanchor="eighthSection">
-            <a href="#eighthSection" title="Fourth Section">Fourth Section</a>
-          </li>
-          <li data-menuanchor="ninthSection">
-            <a href="#ninthSection" title="Fourth Section">Fourth Section</a>
-          </li>
-          <li data-menuanchor="tenthSection">
-            <a href="#tenthSection" title="Fourth Section">Fourth Section</a>
-          </li>
- -->        </ul>
+        	<a href="collaborate.html">
+        		<li class="anim">
+        		<i>collaborate</i>
+	        	</li>
+	        </a>
+        	<a href="events.html">
+	        	<li class="anim">
+	        		events
+	        	</li>
+	        </a>
+        	<a href="stttore.html">
+	        	<li class="anim">
+	        		stttore
+	        	</li>
+	        </a>
+        	<a href="us.html">
+	        	<li class="anim">
+	        		us
+	        	</li>
+	        </a>
+        	<a href="submit.html">
+	        	<li class="anim bottom-rule">
+	        		submit
+	        	</li>
+	        </a>
+        	<a href="tos.html">
+	        	<li class="anim">
+	        		t&amp;c
+	        	</li>
+	        </a>
+        	<a href="faqs.html">
+	        	<li class="anim">
+	        		faqs
+	        	</li>
+	        </a>
+        	<a href="privacy.html">
+	        	<li class="anim bottom-rule">
+	        		policy
+	        	</li>
+	        </a>
+
+        	<li class="anim no-hover">
+        		<table class="social_list_menu" width="100%">
+		        	<tr>
+		        		<td width="20%">
+				        	<img class="social_logo_menu" src="./img/social/facebook-white.png" />
+				        </td>
+				        <td width="20%">
+				        	<img class="social_logo_menu" src="./img/social/instagram-white.png" />
+				        </td>
+				        <td width="20%">
+				        	<img class="social_logo_menu" src="./img/social/twitter-white.png" />
+				        </td>
+				        <td width="20%">
+							<img class="social_logo_menu" src="./img/social/youtube-white.png" />
+				        </td>
+				        <td width="20%">
+				        	<img class="social_logo_menu" src="./img/social/stttore-white.png" />
+				        </td>
+				    </tr>
+				</table>
+        	</li>
+
+		</ul>
       </nav>
     </header>
 
 <div id="fullPage">
     <section class="vertical-scrolling" id="section1">
-    	<div id="logo_hero">
-    		terribly tiny tales<sup><small>TM</small></sup>
-    	</div>
-        <div id="subtitle">The world's largest micro-fiction platform  
-        	<a href="#secondSection" class="icon-up-open-big"></a>
+    	<img src="./img/logo_hero.jpg" id="logo_hero">
+    		<!-- terribly tiny tales<sup><small>&trade;</small></sup> -->
+
+    	<!-- </div> -->
+        <div id="subtitle">The world's largest micro-fiction platform<br /><br /><br />
+        	<a href="#secondSection" class="icon-up-open-big"><img src="./img/down.png" /></a>
         </div>
 
     </section>
@@ -510,65 +224,109 @@ body.fp-viewing-fifthSection-1 #menu li:last-child a {
 	    <div class="horizontal-scrolling">
 	        <img src="./img/tales/3.png" class="tale_slide" />
 	    </div>
-    </section>
-    <section class="vertical-scrolling">
-    <h1 class="sectionheader">Long story short</h1>
-    <span class="subpara">From storifying news to condensing classics, a tale is a book that only takes a minute.</p>
-    </section>
-    <section class="vertical-scrolling">
-    <h1 class="sectionheader">A world full of stories</h1>
-    <span class="subpara">Like hot chocolate during the monsoons, and pina colada during summer, our tales are here to quench every emotion you throw at us.</span>
-    </section>
-    <!-- <section class="vertical-scrolling">
-    <h1 class="sectionheader">Here's to youth</h1>
-    <span class="subpara">Human race has been built on a foundation of stories, and we love telling them. Our tales make sure we keep the legacy alive.</span>
-    </section>
-    <section class="vertical-scrolling">
-    <h1 class="sectionheader">Tiny is the next big thing</h1>
-    <span class="subpara">From storifying news to condensing classics, a tale is a book that only takes a minute.</span>
-    </section>
-    <section class="vertical-scrolling">
-    <h1 class="sectionheader">Everyone's a storyteller</h1>
-    <span class="subpara">From storifying news to condensing classics, a tale is a book that only takes a minute.</span>
-    </section>
-    <section class="vertical-scrolling">
-    <h1 class="sectionheader">You're one in a million</h1>
-    <span class="subpara">From storifying news to condensing classics, a tale is a book that only takes a minute.</span>
-    </section> -->
-    <section class="vertical-scrolling">
-    	<div class="horizontal-scrolling">
-	        <h1>Look at all these brands we've worked with!</h1>
-	        <span class="subpara">Press the right arrow on your keyboard or select one using the circle at the bottom -Mrinal</span>
+	    <div class="horizontal-scrolling">
+	        <img src="./img/tales/4.png" class="tale_slide" />
 	    </div>
 	    <div class="horizontal-scrolling">
-	        <h1>Woohoo! More brands!</h1>
+	        <img src="./img/tales/5.png" class="tale_slide" />
 	    </div>
+	        <div id="timer"></div>
+    </section>
+    <section class="vertical-scrolling">
+    <img src="./img/typing.png" class="sectionimage" />
+    <h1 class="sectionheader">Long story short</h1>
+    <span class="subpara">In this age of dwindling attention spans, we've caught yours.<br />
+		With stories under 1400 characters, we're quick to read, but hard to forget.
+</span>
+    </section>
+    <section class="vertical-scrolling">
+    <img src="./img/letterbox.png" class="sectionimage" />
+    <h1 class="sectionheader">A world full of stories</h1>
+    <span class="subpara">There's a story for every reader, every emotion - served fresh daily.</span>
+    </section>
+    <section class="vertical-scrolling">
+    <img src="./img/book.png" class="sectionimage" />
+    <h1 class="sectionheader">Home to the best writers</h1>
+    <span class="subpara">Discover the world's finest micro-fiction writers. Or become one yourself.</span>
+    </section>
+    <section class="vertical-scrolling">
+    <img src="./img/phone.png" class="sectionimage" />
+    <h1 class="sectionheader">Tiny is the next best thing</h1>
+    <span class="subpara">Reaching over 4.5 million people every week, our stories go further every time.</span>
+    </section>
+    <section class="vertical-scrolling fp-auto-height" id="section_brands">
+	    <h1 class="sectionheader" id="brandheading">Brands we've worked with</h1>
+	    <img src="./img/left.png" id="leftarrow" class="slideControl" />
+	    <img src="./img/right.png" id="rightarrow" class="slideControl" />
+
+    	<div class="horizontal-scrolling">
+	        <table class="brands_list" width="70%">
+	        	<tr>
+	        		<td width="33%">
+			        	<img class="brand_logo" src="./img/brand_logos/amnesty.png" />
+			        </td>
+			        <td width="33%">
+			        	<img class="brand_logo" src="./img/brand_logos/cornetto.png" />
+			        </td>
+			        <td width="33%">
+			        	<img class="brand_logo" src="./img/brand_logos/stayfree.png" />
+			        </td>
+			    </tr>
+			</table>
+	    </div>
+	    <div class="horizontal-scrolling">
+			<table class="brands_list" width="70%">
+			    <tr>
+			        <td width="33%">
+						<img class="brand_logo" src="./img/brand_logos/asianpaints.png" />
+			        </td>
+			        <td width="33%">
+			        	<img class="brand_logo" src="./img/brand_logos/vodafone.png" />
+			        </td>
+			        <td width="33%">
+			        	<img class="brand_logo" src="./img/brand_logos/schartered.png" />
+			        </td>
+			    </tr>
+			</table>
+		</div>
     </section> 
     <section class="vertical-scrolling">
-    	<h1>Join our community</h1><br /><br /><br /><br />
-    	<div id="social">
-    		<span class="social_icon">FACEBOOK</span>
-    		<span class="social_icon">INSTAGRAM</span>
-    		<span class="social_icon">TWITTER</span>
-    		<span class="social_icon">YOUTUBE</span>
-    		<span class="social_icon">STORE</span>
-    	</div>
-    	<table class="footer fp-auto-height">
+    	<h1 class="sectionheader">Join our community</h1>
+    	<table class="social_list" width="100%">
+	        	<tr>
+	        		<td width="20%">
+			        	<img class="brand_logo" src="./img/social/facebook.png" />
+			        </td>
+			        <td width="20%">
+			        	<img class="brand_logo" src="./img/social/instagram.png" />
+			        </td>
+			        <td width="20%">
+			        	<img class="brand_logo" src="./img/social/twitter.png" />
+			        </td>
+			        <td width="20%">
+						<img class="brand_logo" src="./img/social/youtube.png" />
+			        </td>
+			        <td width="20%">
+			        	<img class="brand_logo" src="./img/social/stttore.png" />
+			        </td>
+			    </tr>
+			</table>
+    	<table class="footer">
     		<tr>
     			<td width="30%" class="anim">
-    				About
+    				<a href="us.html">Us</a>
     			</td>
     			<td width="33%" class="anim">
-    				FAQs
+    				<a href="faqs.html">FAQ</a>
     			</td>
     			<td width="33%" rowspan="3" class="anim">
     				<span style="font-size: 4em; font-family: neue;">ttt</span>
-    				<br />Download
+    				<br /><a href="mediakit.html">Download</a>
     			</td>
     		</tr>
     		<tr>
     			<td width="33%" class="anim">
-    				Privacy
+    				<a href="privacy.html">Privacy</a>
     			</td>
     			<td width="33%" class="anim">
     				Blog
@@ -576,10 +334,10 @@ body.fp-viewing-fifthSection-1 #menu li:last-child a {
     		</tr>
     		<tr>
     			<td width="33%" class="anim">
-    				Terms of Service
+    				<a href="tos.html">Terms of Service</a>
     			</td>	
     			<td width="33%" class="anim">
-    				Press
+    				<a href="press.html">Press</a>
     			</td>
     		</tr>
     	</table>
@@ -591,41 +349,95 @@ body.fp-viewing-fifthSection-1 #menu li:last-child a {
 </body>
 	<script src="./js/jquery.js"></script>
 	<script src="./js/fullpage.js"></script>
+	<script src="./js/progressbar.js"></script>
 	<script>
 	$(document).ready(function() {
+			var windowWidth = $(document).width();
+					// Progressbar
+		var bar = new ProgressBar.Line('#timer', {
+		  strokeWidth: 1,
+		  easing: 'linear',
+		  duration: 7000,
+		  color: '#000000',
+		  trailColor: '#aaa',
+		  trailWidth: 1,
+		  svgStyle: {width: '100%', height: '100%'}
+		});
+
+			if (windowWidth < 767) {
+				$('.brand_logos').css("width", "100%");
+				$('.brands_list').css("width", "80%");
+			}
 		 // variables
 		  var $header_top = $('.header-top');
 		  var $nav = $('nav');
-      	// $('.tale_slide').css('height', window.height/2);
 
+      		$nav.click(function() {
+			    $header_top.toggleClass('open-menu');
+			    if ($header_top.hasClass('open-menu')) {
+		      	}
+		      	else {
+				      	$header_top.fadeOut();		      			
+		      	}
+      		});
 
-		  // toggle menu 
-		  $header_top.find('a').on('click', function() {
-		    $(this).parent().toggleClass('open-menu');
-		  });
+      		$('#menu').click(function(e) {
+      			e.stopPropagation();
+      		});
+	
+
+			$('#leftarrow').click(function() {
+				$.fn.fullpage.moveSlideLeft();
+			});
+
+			$('#rightarrow').click(function() {
+				$.fn.fullpage.moveSlideRight();
+			});
+
+	  // toggle menu 
+			  $header_top.find('a').on('click', function() {
+			    $(this).parent().toggleClass('open-menu');
+			    if ($header_top.hasClass('open-menu')) {
+			    		console.log("Opening");
+			    		window.revertAfterMenuClose = window.lastSlideLoaded;
+			    		console.log("moving to"+window.anchors[window.revertAfterMenuClose-1])
+						// $.fn.fullpage.silentMoveTo(window.anchors[window.revertAfterMenuClose-1]);
+			      	}
+			      	else {
+					      	$header_top.fadeOut();	
+						console.log(window.revertAfterMenuClose-1)
+
+						// $.fn.fullpage.silentMoveTo(window.revertAfterMenuClose-1);
+			      	}
+			  });
+
+		 window.anchors = ['firstSection', 'secondSection', 'thirdSection', 'fourthSection', 'fifthSection', 'sixthSection', 'seventhSection', 'eighthSection'];
+
 
 		$('#fullPage').fullpage({
 		    sectionSelector: '.vertical-scrolling',
 		    slideSelector: '.horizontal-scrolling',
 		    controlArrows: false, 
 		    scrollBar: true, 
-		    navigation: true, 
-		    slidesNavigation: true,
-		    anchors: ['firstSection', 'secondSection', 'thirdSection', 'fourthSection', 'fifthSection', 'sixthSection'],
-		    menu: '#menu',
+		    // navigation: true, 
+		    slidesNavigation: false,
+		    anchors: window.anchors,
+		    autoScrolling: true,
 
 		    afterLoad: function(anchorLink, index) {
-		      $header_top.css('background', 'rgba(0,0,0, 0.9)');
-		      $nav.css('background', 'rgba(0,0,0,0.7)');
-		      $('#fp-nav ul li a span, .fp-slidesNav ul li a span').css('background', 'rgb(0,0,0)'); 
+		      window.lastSlideLoaded = index;
+		      $header_top.css('background', 'rgba(0,0,0, 1)');
+		      $nav.css('background', 'rgba(0,0,0,0.9)');
 		      if (index == 1) {
-		      $('#fp-nav ul li a span, .fp-slidesNav ul li a span').css('background', 'rgb(255,255,255)'); 
-		      	$header_top.fadeOut();
+		      	if ($header_top.hasClass('open-menu')) {
+		      	}
+		      	else {
+			      	$header_top.fadeOut();
+		      	}
 		      }
 		        else {
 			      	$header_top.fadeIn();
-
-		        	if (index == 2) {
+		        	if (index == 7) {
 				      $('#fp-nav ul li a span, .fp-slidesNav ul li a span').css('background', 'rgb(255,255,255)'); 
 
 		        	}
@@ -633,34 +445,46 @@ body.fp-viewing-fifthSection-1 #menu li:last-child a {
 				      $('#fp-nav ul li a span, .fp-slidesNav ul li a span').css('background', 'rgb(0,0,0)'); 
 
 		        	}
+					
 
+					if (index == 7) {
+						$('#brandheading').fadeIn();
+						$('.slideControl').fadeIn();
+					}
+					else {
+						$('#brandheading').fadeOut();
+						$('.slideControl').fadeOut();
+					}
 		        }
+					beginTimer(bar, index);
 		    },
 
 		    onLeave: function(index, nextIndex, direction) {
-		      if(index == 5) {
-		        // $('#fp-nav').show();
-		      }
 		    },
 
 		    afterSlideLoad: function( anchorLink, index, slideAnchor, slideIndex){
             var loadedSlide = $(this);
-
-            //first slide of the second section
-            if(index == 2 && slideIndex == 0){
-            	// $('.tale_slide').css("max-width", "100%");
-            }
-
-            //second slide of the second section (supposing #secondSlide is the
-            //anchor for the second slide
-            if(index == 2 && slideIndex == 'secondSlide'){
-                alert("Second slide loaded");
-            }
         }
 
 		});
 		$.fn.fullpage.reBuild();
-	});
 
+
+	function beginTimer(bar, index) {
+		if (index == 2) {
+			$('#timer').fadeIn();
+			bar.set(0.0);
+			bar.animate(1.0, function() {
+				$.fn.fullpage.moveSlideRight();
+				beginTimer(bar, index);
+			}); 
+		}
+		else {
+			$('#timer').fadeOut();
+			bar.stop();
+			bar.set(0.0);
+		}
+	}
+});
 	</script>
 </html>
